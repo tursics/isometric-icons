@@ -1,0 +1,62 @@
+{
+	"ringbahn": [
+		[0, 16], // Westkreuz
+		[0, 24], // WP
+		[5, 29], // Heidelberger Platz
+		[11, 29], // Bundesplatz
+		[17, 29], // Innsbrucker Platz
+		[21, 29], // Schöneberg
+		[26, 29], // Südkreuz
+		[31, 29], // Tempelhof
+		[41, 29], // Hermannstraße
+		[46, 29], // Neukölln
+		[48, 29], // WP
+		[54, 23], // Treptower Park
+		[54, 17], // Ostkreuz
+		[54, 14], // Frankfurter Allee
+		[54, 6], // WP
+		[48, 0], // WP
+		[38, 0], // Schönhauser Allee
+		[30, 0], // Gesundbrunnen
+		[21, 0], // Wedding
+		[16, 0], // Westhafen
+		[5, 0], // WP
+		[4, 1], // Jungfernheide
+		[0, 5], // WP
+		[0, 13], // Messe Nord / ICC
+		[0, 16] // Westkreuz
+	],
+	"stadtbahn": [
+		[0, 16], // Westkreuz
+		[5, 16], // Charlottenburg
+		[12, 16], // Zoologischer Garten
+		[20, 8], // WP
+		[22, 8], // Hauptbahnhof
+		[29, 8], // Friedrichstraße
+		[38, 8], // WP
+		[40, 10], // Alexanderplatz
+		[42, 12], // Jannowitzbrücke
+		[47, 17], // Warschauer Straße
+		[54, 17] // Ostkreuz
+	],
+	"s1": [
+		[30, 0], // Gesundbrunnen
+		[30, 7], // WP
+		[29, 8], // Friedrichstraße
+		[26, 11], // WP
+		[26, 12], // Brandenburger Tor
+		[26, 15], // Potsdamer Platz
+		[26, 24], // Yorckstraße
+		[21, 29] // Schöneberg
+	],
+	"s2": [
+		[30, 0], // Gesundbrunnen
+		[30, 7], // WP
+		[29, 8], // Friedrichstraße
+		[26, 11], // WP
+		[26, 12], // Brandenburger Tor
+		[26, 15], // Potsdamer Platz
+		[26, 24], // Yorckstraße
+		[26, 29] // Südkreuz
+	]
+}

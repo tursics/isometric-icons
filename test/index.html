@@ -1,0 +1,304 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<style>
+#map {
+	margin: 80px 0 0 0;
+}
+#map p {
+	white-space: nowrap;
+	position: relative;
+	height: 33px;
+	margin: 0;
+	padding: 0;
+}
+#map p:nth-child(even) {
+	margin-left: 65px;
+}
+#map p img.tile {
+	position: absolute;
+	bottom: 0;
+}
+	</style>
+</head>
+<body>
+	<div id="map"></div>
+</body>
+<script type="text/javascript">
+	var lines =
+{
+	"ringbahn": [
+		[0, 16], // Westkreuz
+		[0, 19], // Halensee
+		[0, 24], // WP
+		[1, 25], // Hohenzollerndamm
+		[5, 29], // Heidelberger Platz
+		[11, 29], // Bundesplatz
+		[17, 29], // Innsbrucker Platz
+		[21, 29], // Schöneberg
+		[26, 29], // Südkreuz
+		[31, 29], // Tempelhof
+		[41, 29], // Hermannstraße
+		[46, 29], // Neukölln
+		[48, 29], // WP
+		[50, 27], // Sonnenallee
+		[54, 23], // Treptower Park
+		[54, 17], // Ostkreuz
+		[54, 14], // Frankfurter Allee
+		[54, 11], // Storkower Straße
+		[54, 8], // Landsberger Allee
+		[54, 6], // WP
+		[50, 2], // Greifswalder Straße
+		[48, 0], // WP
+		[46, 0], // Prenzlauer Allee
+		[38, 0], // Schönhauser Allee
+		[30, 0], // Gesundbrunnen
+		[21, 0], // Wedding
+		[16, 0], // Westhafen
+		[11, 0], // Beusselstraße
+		[5, 0], // WP
+		[4, 1], // Jungfernheide
+		[0, 5], // WP
+		[0, 8], // Westend
+		[0, 13], // Messe Nord / ICC
+		[0, 16] // Westkreuz
+	],
+	"stadtbahn": [
+		[0, 16], // Westkreuz
+		[5, 16], // Charlottenburg
+		[8, 16], // Savignyplatz
+		[12, 16], // Zoologischer Garten
+		[15, 13], // Tiergarten
+		[18, 10], // Bellevue
+		[20, 8], // WP
+		[22, 8], // Hauptbahnhof
+		[29, 8], // Friedrichstraße
+		[33, 8], // Hackescher Markt
+		[38, 8], // WP
+		[40, 10], // Alexanderplatz
+		[42, 12], // Jannowitzbrücke
+		[44, 14], // Ostbahnhof
+		[47, 17], // Warschauer Straße
+		[54, 17] // Ostkreuz
+	],
+	"s1": [
+		[30, 0], // Gesundbrunnen
+		[30, 2], // Humboldthain
+		[30, 3], // Nordbahnhof
+		[30, 5], // Oranienburger Straße
+		[30, 7], // WP
+		[29, 8], // Friedrichstraße
+		[26, 11], // WP
+		[26, 12], // Brandenburger Tor
+		[26, 15], // Potsdamer Platz
+		[26, 17], // Anhalter Bahnhof
+		[26, 24], // Yorckstraße
+		[23, 27], // Julius-Leber-Brücke
+		[21, 29] // Schöneberg
+	],
+	"s2": [
+		[30, 0], // Gesundbrunnen
+		[30, 2], // Humboldthain
+		[30, 3], // Nordbahnhof
+		[30, 5], // Oranienburger Straße
+		[30, 7], // WP
+		[29, 8], // Friedrichstraße
+		[26, 11], // WP
+		[26, 12], // Brandenburger Tor
+		[26, 15], // Potsdamer Platz
+		[26, 17], // Anhalter Bahnhof
+		[26, 24], // Yorckstraße
+		[26, 29] // Südkreuz
+	],
+	"u1": [
+		[9, 19], // Uhlandstraße
+		[11, 19], // Kurfürstendamm
+		[16, 19], // Wittenbergplatz
+		[19, 19], // Nollendorfplatz
+		[21, 19], // Kurfürstenstraße
+		[23, 19], // Gleisdreieck
+		[28, 19], // Möckernbrücke
+		[31, 19], // Hallesches Tor
+		[36, 19], // Prinzenstraße
+		[41, 19], // Kottbusser Tor
+		[43, 19], // Görlitzer Bahnhof
+		[45, 19], // Schlesisches Tor
+		[47, 17] // Warschauer Straße
+	],
+	"u2": [
+		[0, 13], // Kaiserdamm
+		[3, 13], // Sophie-Charlotte-Platz
+		[5, 13], // Bismarckstraße
+		[7, 13], // Deutsche Oper
+		[9, 13], // Ernst-Reuter-Platz
+		[12, 16], // Zoologischer Garten
+		[15, 19], // WP
+		[16, 19], // Wittenbergplatz
+		[19, 19], // Nollendorfplatz
+		[20, 20], // WP
+		[21, 20], // Bülowstraße
+		[22, 20], // WP
+		[23, 19], // Gleisdreieck
+		[24, 18], // WP
+		[24, 16], // Mendelssohn-Bartholdy-Park
+		[24, 15], // WP
+		[26, 15], // Potsdamer Platz
+		[28, 15], // Mohrenstraße
+		[31, 15], // Stadtmitte
+		[33, 15], // Hausvogteiplatz
+		[36, 15], // Spittelmarkt
+		[38, 15], // Märkisches Museum
+		[40, 13], // Klosterstraße
+		[40, 10], // Alexanderplatz
+		[38, 8], // WP
+		[38, 6], // Rosa-Luxemburg-Platz
+		[38, 4], // Senefelderplatz
+		[38, 2], // Eberswalder Straße
+		[38, 0] // Schönhauser Allee
+	],
+	"u3": [
+		[5, 29], // Heidelberger Platz
+		[6, 27], // Hohenzollernplatz
+		[8, 26], // Fehrbelliner Platz
+		[11, 23], // Spichernstraße
+		[13, 21], // Augsburger Straße
+		[15, 19], // WP
+		[16, 19], // Wittenbergplatz
+		[19, 19] // Nollendorfplatz
+	],
+	"u4": [
+		[17, 29], // Innsbrucker Platz
+		[17, 28], // Rathaus Schöneberg
+		[17, 26], // Bayerischer Platz
+		[17, 23], // Viktoria-Luise-Platz
+		[17, 19], // WP
+		[19, 19] // Nollendorfplatz
+	],
+	"u5": [
+		[40, 10], // Alexanderplatz
+		[45, 10], // Schillingstraße
+		[46, 11], // Strausberger Platz
+		[47, 12], // Weberwiese
+		[48, 13], // Frankfurter Tor
+		[49, 14], // Samariterstraße
+		[54, 14] // Frankfurter Allee
+	],
+	"u6": [
+		[21, 0], // Wedding
+		[22, 1], // Reinickendorfer Straße
+		[24, 3], // Schwartzkopffstraße
+		[25, 4], // Naturkundemuseum
+		[27, 6], // Oranienburger Tor
+		[29, 8], // Friedrichstraße
+		[31, 10], // WP
+		[31, 13], // Französische Straße
+		[31, 15], // Stadtmitte
+		[31, 17], // Kochstraße
+		[31, 19], // Hallesches Tor
+		[31, 22], // Mehringdamm
+		[31, 25], // Platz der Luftbrücke
+		[31, 27], // Paradestraße
+		[31, 29] // Tempelhof
+	],
+	"u7": [
+		[4, 1], // Jungfernheide
+		[5, 2], // WP
+		[5, 6], // Mierendorffplatz
+		[5, 10], // Richard-Wagner-Platz
+		[5, 13], // Bismarckstraße
+		[5, 16], // Wilmersdorfer Straße
+		[5, 20], // Adenauerplatz
+		[5, 23], // Konstanzer Straße
+		[8, 26], // Fehrbelliner Platz
+		[9, 26], // Blissestraße
+		[11, 26], // Berliner Straße
+		[17, 26], // Bayerischer Platz
+		[19, 26], // Eisenacher Straße
+		[21, 26], // Kleistpark
+		[24, 26], // WP
+		[26, 24], // Yorckstraße
+		[27, 23], // WP
+		[27, 19], // WP
+		[28, 19], // Möckernbrücke
+		[29, 19], // WP
+		[31, 21], // WP
+		[31, 22], // Mehringdamm
+		[31, 23], // WP
+		[34, 23], // Gneisenaustraße
+		[38, 23], // Südstern
+		[41, 23], // Hermannplatz
+		[43, 23], // WP
+		[45, 25], // Rathaus Neukölln
+		[46, 26], // Karl-Marx-Straße
+		[46, 29] // Neukölln
+	],
+	"u8": [
+		[30, 0], // Gesundbrunnen
+		[31, 1], // Voltastraße
+		[33, 3], // Bernauer Straße
+		[34, 4], // Rosenthaler Platz
+		[36, 6], // Weinmeisterstraße
+		[40, 10], // Alexanderplatz
+		[42, 12], // Jannowitzbrücke
+		[41, 13], // WP
+		[41, 15], // Heinrich-Heine-Straße
+		[41, 17], // Moritzplatz
+		[41, 19], // Kottbusser Tor
+		[41, 21], // Schönleinstraße
+		[41, 23], // Hermannplatz
+		[41, 25], // Boddinstraße
+		[41, 27], // Leinestraße
+		[41, 29], // Hermannstraße
+	],
+	"u9": [
+		[16, 0], // Westhafen
+		[16, 3], // Birkenstraße
+		[16, 6], // Turmstraße
+		[16, 12], // Hansaplatz
+		[12, 16], // Zoologischer Garten
+		[11, 17], // WP
+		[11, 19], // Kurfürstendamm
+		[11, 23], // Spichernstraße
+		[11, 24], // Güntzelstraße
+		[11, 26], // Berliner Straße
+		[11, 29] // Bundesplatz
+	]
+}
+	;
+
+	var maxX = 0, maxY = 0;
+	for (var key in lines) {
+		var line = lines[key];
+		for (var index = 0; index < line.length; ++index) {
+			var point = line[index];
+			maxX = Math.max(maxX, point[0]);
+			maxY = Math.max(maxY, point[1]);
+		}
+	}
+	++maxX;
+	++maxY;
+
+	var map = document.getElementById('map');
+	var html = '';
+	for (var y = 0; y < maxY; ++y) {
+		html += '<p>';
+		for (var x = 0; x < maxX; ++x) {
+			html += '<img id="tile' + x + '_' + y + '" class="tile" style="left:' + (x * 130) + 'px;" src="../cityTiles/cityTiles_072.png">';
+		}
+		html += '</p>';
+	}
+	map.innerHTML = html;
+
+	for (var key in lines) {
+		var line = lines[key];
+		for (var index = 0; index < line.length; ++index) {
+			var point = line[index];
+			var tile = document.getElementById('tile' + point[0] + '_' + point[1]);
+			tile.src = '../cityTiles/cityTiles_067.png';
+		}
+	}
+</script>
+</html>
