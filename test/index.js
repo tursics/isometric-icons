@@ -70,7 +70,7 @@ function composeMap(lines, netSBahn, netUBahn) {
 			var line = lines[key];
 			for (var index = 0; index < line.length; ++index) {
 				var coords = line[index].coords;
-				if (y === coords.y) {
+				if ('station' === (line[index].type) && (y === coords.y)) {
 					if ('u' === key.substr(0, 1)) {
 						++stationsU[coords.x];
 					} else {
