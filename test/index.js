@@ -45,7 +45,16 @@ function composeMap(lines, netSBahn, netUBahn) {
 				case '-': img = '../transportTiles/transportTilesRLsbahn.png'; break;
 				case '|': img = '../transportTiles/transportTilesTBsbahn.png'; break;
 				case '/': img = '../transportTiles/transportTilesNSsbahn.png'; break;
+				case ';': img = '../transportTiles/transportTilesEWsbahn.png'; break;
 				case '.': img = '../transportTiles/transportTilesRSsbahn.png'; break;
+				}
+			} else if ((typeof netUBahn[y] !== 'undefined') && (typeof netUBahn[y][x] !== 'undefined')) {
+				switch(netUBahn[y][x]) {
+				case '-': img = '../transportTiles/transportTilesRLubahn.png'; break;
+				case '|': img = '../transportTiles/transportTilesTBubahn.png'; break;
+				case '/': img = '../transportTiles/transportTilesNSubahn.png'; break;
+				case ';': img = '../transportTiles/transportTilesEWubahn.png'; break;
+				case '.': img = '../transportTiles/transportTilesRSubahn.png'; break;
 				}
 			}
 			html += '<img id="tile' + x + '_' + y + '" class="tile" style="left:' + (x * 130) + 'px;" src="' + img + '">';
