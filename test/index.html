@@ -268,6 +268,23 @@
 	]
 }
 	;
+	var netSBahn =
+[
+	'  .--------',
+	' /',
+	' /',
+	'',
+	'|',
+	'|',
+	''
+]
+	;
+	var netUBahn =
+[
+	'',
+	''
+]
+	;
 
 	var maxX = 0, maxY = 0;
 	for (var key in lines) {
@@ -286,12 +303,23 @@
 	for (var y = 0; y < maxY; ++y) {
 		html += '<p>';
 		for (var x = 0; x < maxX; ++x) {
-			html += '<img id="tile' + x + '_' + y + '" class="tile" style="left:' + (x * 130) + 'px;" src="../cityTiles/cityTiles_072.png">';
+			var img = '../cityTiles/cityTiles_072.png';
+
+			if ((typeof netSBahn[y] !== 'undefined') && (typeof netSBahn[y][x] !== 'undefined')) {
+				switch(netSBahn[y][x]) {
+				case '-': img = '../transportTiles/transportTilesRLsbahn.png'; break;
+				case '|': img = '../transportTiles/transportTilesTBsbahn.png'; break;
+				case '/': img = '../transportTiles/transportTilesNSsbahn.png'; break;
+				case '.': img = '../transportTiles/transportTilesRSsbahn.png'; break;
+				}
+			}
+			html += '<img id="tile' + x + '_' + y + '" class="tile" style="left:' + (x * 130) + 'px;" src="' + img + '">';
 		}
 		html += '</p>';
 	}
 	map.innerHTML = html;
 
+	// show stations
 	for (var key in lines) {
 		var line = lines[key];
 		for (var index = 0; index < line.length; ++index) {
