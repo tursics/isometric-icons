@@ -30,242 +30,4691 @@
 <script type="text/javascript">
 	var lines =
 {
-	"ringbahn": [
-		[0, 16], // Westkreuz
-		[0, 19], // Halensee
-		[0, 24], // WP
-		[1, 25], // Hohenzollerndamm
-		[5, 29], // Heidelberger Platz
-		[11, 29], // Bundesplatz
-		[17, 29], // Innsbrucker Platz
-		[21, 29], // Schöneberg
-		[26, 29], // Südkreuz
-		[31, 29], // Tempelhof
-		[41, 29], // Hermannstraße
-		[46, 29], // Neukölln
-		[48, 29], // WP
-		[50, 27], // Sonnenallee
-		[54, 23], // Treptower Park
-		[54, 17], // Ostkreuz
-		[54, 14], // Frankfurter Allee
-		[54, 11], // Storkower Straße
-		[54, 8], // Landsberger Allee
-		[54, 6], // WP
-		[50, 2], // Greifswalder Straße
-		[48, 0], // WP
-		[46, 0], // Prenzlauer Allee
-		[38, 0], // Schönhauser Allee
-		[30, 0], // Gesundbrunnen
-		[21, 0], // Wedding
-		[16, 0], // Westhafen
-		[11, 0], // Beusselstraße
-		[5, 0], // WP
-		[4, 1], // Jungfernheide
-		[0, 5], // WP
-		[0, 8], // Westend
-		[0, 13], // Messe Nord / ICC
-		[0, 16] // Westkreuz
-	],
-	"stadtbahn": [
-		[0, 16], // Westkreuz
-		[5, 16], // Charlottenburg
-		[8, 16], // Savignyplatz
-		[12, 16], // Zoologischer Garten
-		[15, 13], // Tiergarten
-		[18, 10], // Bellevue
-		[20, 8], // WP
-		[22, 8], // Hauptbahnhof
-		[29, 8], // Friedrichstraße
-		[33, 8], // Hackescher Markt
-		[38, 8], // WP
-		[40, 10], // Alexanderplatz
-		[42, 12], // Jannowitzbrücke
-		[44, 14], // Ostbahnhof
-		[47, 17], // Warschauer Straße
-		[54, 17] // Ostkreuz
-	],
-	"s1": [
-		[30, 0], // Gesundbrunnen
-		[30, 2], // Humboldthain
-		[30, 3], // Nordbahnhof
-		[30, 5], // Oranienburger Straße
-		[30, 7], // WP
-		[29, 8], // Friedrichstraße
-		[26, 11], // WP
-		[26, 12], // Brandenburger Tor
-		[26, 15], // Potsdamer Platz
-		[26, 17], // Anhalter Bahnhof
-		[26, 24], // Yorckstraße
-		[23, 27], // Julius-Leber-Brücke
-		[21, 29] // Schöneberg
-	],
-	"s2": [
-		[30, 0], // Gesundbrunnen
-		[30, 2], // Humboldthain
-		[30, 3], // Nordbahnhof
-		[30, 5], // Oranienburger Straße
-		[30, 7], // WP
-		[29, 8], // Friedrichstraße
-		[26, 11], // WP
-		[26, 12], // Brandenburger Tor
-		[26, 15], // Potsdamer Platz
-		[26, 17], // Anhalter Bahnhof
-		[26, 24], // Yorckstraße
-		[26, 29] // Südkreuz
-	],
-	"u1": [
-		[9, 19], // Uhlandstraße
-		[11, 19], // Kurfürstendamm
-		[16, 19], // Wittenbergplatz
-		[19, 19], // Nollendorfplatz
-		[21, 19], // Kurfürstenstraße
-		[23, 19], // Gleisdreieck
-		[28, 19], // Möckernbrücke
-		[31, 19], // Hallesches Tor
-		[36, 19], // Prinzenstraße
-		[41, 19], // Kottbusser Tor
-		[43, 19], // Görlitzer Bahnhof
-		[45, 19], // Schlesisches Tor
-		[47, 17] // Warschauer Straße
-	],
-	"u2": [
-		[0, 13], // Kaiserdamm
-		[3, 13], // Sophie-Charlotte-Platz
-		[5, 13], // Bismarckstraße
-		[7, 13], // Deutsche Oper
-		[9, 13], // Ernst-Reuter-Platz
-		[12, 16], // Zoologischer Garten
-		[15, 19], // WP
-		[16, 19], // Wittenbergplatz
-		[19, 19], // Nollendorfplatz
-		[20, 20], // WP
-		[21, 20], // Bülowstraße
-		[22, 20], // WP
-		[23, 19], // Gleisdreieck
-		[24, 18], // WP
-		[24, 16], // Mendelssohn-Bartholdy-Park
-		[24, 15], // WP
-		[26, 15], // Potsdamer Platz
-		[28, 15], // Mohrenstraße
-		[31, 15], // Stadtmitte
-		[33, 15], // Hausvogteiplatz
-		[36, 15], // Spittelmarkt
-		[38, 15], // Märkisches Museum
-		[40, 13], // Klosterstraße
-		[40, 10], // Alexanderplatz
-		[38, 8], // WP
-		[38, 6], // Rosa-Luxemburg-Platz
-		[38, 4], // Senefelderplatz
-		[38, 2], // Eberswalder Straße
-		[38, 0] // Schönhauser Allee
-	],
-	"u3": [
-		[5, 29], // Heidelberger Platz
-		[6, 27], // Hohenzollernplatz
-		[8, 26], // Fehrbelliner Platz
-		[11, 23], // Spichernstraße
-		[13, 21], // Augsburger Straße
-		[15, 19], // WP
-		[16, 19], // Wittenbergplatz
-		[19, 19] // Nollendorfplatz
-	],
-	"u4": [
-		[17, 29], // Innsbrucker Platz
-		[17, 28], // Rathaus Schöneberg
-		[17, 26], // Bayerischer Platz
-		[17, 23], // Viktoria-Luise-Platz
-		[17, 19], // WP
-		[19, 19] // Nollendorfplatz
-	],
-	"u5": [
-		[40, 10], // Alexanderplatz
-		[45, 10], // Schillingstraße
-		[46, 11], // Strausberger Platz
-		[47, 12], // Weberwiese
-		[48, 13], // Frankfurter Tor
-		[49, 14], // Samariterstraße
-		[54, 14] // Frankfurter Allee
-	],
-	"u6": [
-		[21, 0], // Wedding
-		[22, 1], // Reinickendorfer Straße
-		[24, 3], // Schwartzkopffstraße
-		[25, 4], // Naturkundemuseum
-		[27, 6], // Oranienburger Tor
-		[29, 8], // Friedrichstraße
-		[31, 10], // WP
-		[31, 13], // Französische Straße
-		[31, 15], // Stadtmitte
-		[31, 17], // Kochstraße
-		[31, 19], // Hallesches Tor
-		[31, 22], // Mehringdamm
-		[31, 25], // Platz der Luftbrücke
-		[31, 27], // Paradestraße
-		[31, 29] // Tempelhof
-	],
-	"u7": [
-		[4, 1], // Jungfernheide
-		[5, 2], // WP
-		[5, 6], // Mierendorffplatz
-		[5, 10], // Richard-Wagner-Platz
-		[5, 13], // Bismarckstraße
-		[5, 16], // Wilmersdorfer Straße
-		[5, 20], // Adenauerplatz
-		[5, 23], // Konstanzer Straße
-		[8, 26], // Fehrbelliner Platz
-		[9, 26], // Blissestraße
-		[11, 26], // Berliner Straße
-		[17, 26], // Bayerischer Platz
-		[19, 26], // Eisenacher Straße
-		[21, 26], // Kleistpark
-		[24, 26], // WP
-		[26, 24], // Yorckstraße
-		[27, 23], // WP
-		[27, 19], // WP
-		[28, 19], // Möckernbrücke
-		[29, 19], // WP
-		[31, 21], // WP
-		[31, 22], // Mehringdamm
-		[31, 23], // WP
-		[34, 23], // Gneisenaustraße
-		[38, 23], // Südstern
-		[41, 23], // Hermannplatz
-		[43, 23], // WP
-		[45, 25], // Rathaus Neukölln
-		[46, 26], // Karl-Marx-Straße
-		[46, 29] // Neukölln
-	],
-	"u8": [
-		[30, 0], // Gesundbrunnen
-		[31, 1], // Voltastraße
-		[33, 3], // Bernauer Straße
-		[34, 4], // Rosenthaler Platz
-		[36, 6], // Weinmeisterstraße
-		[40, 10], // Alexanderplatz
-		[42, 12], // Jannowitzbrücke
-		[41, 13], // WP
-		[41, 15], // Heinrich-Heine-Straße
-		[41, 17], // Moritzplatz
-		[41, 19], // Kottbusser Tor
-		[41, 21], // Schönleinstraße
-		[41, 23], // Hermannplatz
-		[41, 25], // Boddinstraße
-		[41, 27], // Leinestraße
-		[41, 29], // Hermannstraße
-	],
-	"u9": [
-		[16, 0], // Westhafen
-		[16, 3], // Birkenstraße
-		[16, 6], // Turmstraße
-		[16, 12], // Hansaplatz
-		[12, 16], // Zoologischer Garten
-		[11, 17], // WP
-		[11, 19], // Kurfürstendamm
-		[11, 23], // Spichernstraße
-		[11, 24], // Güntzelstraße
-		[11, 26], // Berliner Straße
-		[11, 29] // Bundesplatz
-	]
+  "ring": [
+    {
+      "coords": {
+        "x": 22,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Westkreuz"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Halensee"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 96
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 23,
+        "y": 98
+      },
+      "type": "station",
+      "name": "Hohenzollerndamm"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Heidelberger Platz"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Bundesplatz"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Innsbrucker Platz"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Schöneberg"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Südkreuz"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Tempelhof"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Hermannstraße"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Neukölln"
+    },
+    {
+      "coords": {
+        "x": 70,
+        "y": 106
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 72,
+        "y": 102
+      },
+      "type": "station",
+      "name": "Sonnenallee"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Treptower Park"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Ostkreuz"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Frankfurter Allee"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 70
+      },
+      "type": "station",
+      "name": "Storkower Straße"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Landsberger Allee"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 60
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 72,
+        "y": 52
+      },
+      "type": "station",
+      "name": "Greifswalder Straße"
+    },
+    {
+      "coords": {
+        "x": 70,
+        "y": 48
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Prenzlauer Allee"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Schönhauser Allee"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Gesundbrunnen"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Wedding"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Westhafen"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Beusselstraße"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 48
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 26,
+        "y": 50
+      },
+      "type": "station",
+      "name": "Jungfernheide"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 58
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Westend"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Messe Nord / ICC"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Westkreuz"
+    }
+  ],
+  "s1": [
+    {
+      "coords": {
+        "x": 35,
+        "y": 0
+      },
+      "type": "station",
+      "name": "Oranienburg"
+    },
+    {
+      "coords": {
+        "x": 36,
+        "y": 2
+      },
+      "type": "station",
+      "name": "Lehnitz"
+    },
+    {
+      "coords": {
+        "x": 37,
+        "y": 4
+      },
+      "type": "station",
+      "name": "Borgsdorf"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 6
+      },
+      "type": "station",
+      "name": "Birkenwerder"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 8
+      },
+      "type": "station",
+      "name": "Hohen Neuendorf"
+    },
+    {
+      "coords": {
+        "x": 40,
+        "y": 10
+      },
+      "type": "station",
+      "name": "Frohnau"
+    },
+    {
+      "coords": {
+        "x": 41,
+        "y": 12
+      },
+      "type": "station",
+      "name": "Hermsdorf"
+    },
+    {
+      "coords": {
+        "x": 42,
+        "y": 14
+      },
+      "type": "station",
+      "name": "Waidmannslust"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 16
+      },
+      "type": "station",
+      "name": "Wittenau"
+    },
+    {
+      "coords": {
+        "x": 44,
+        "y": 18
+      },
+      "type": "station",
+      "name": "Wilhelmsruh"
+    },
+    {
+      "coords": {
+        "x": 46,
+        "y": 22
+      },
+      "type": "station",
+      "name": "Schönholz"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 34
+      },
+      "type": "station",
+      "name": "Wollankstraße"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 40
+      },
+      "type": "station",
+      "name": "Bornholmer Straße"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Gesundbrunnen"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 52
+      },
+      "type": "station",
+      "name": "Humboldthain"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 54
+      },
+      "type": "station",
+      "name": "Nordbahnhof"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 58
+      },
+      "type": "station",
+      "name": "Oranienburger Straße"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 62
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 51,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Friedrichstraße"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 70
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Brandenburger Tor"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 78
+      },
+      "type": "station",
+      "name": "Potsdamer Platz"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Anhalter Bahnhof"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 96
+      },
+      "type": "station",
+      "name": "Yorckstraße"
+    },
+    {
+      "coords": {
+        "x": 45,
+        "y": 102
+      },
+      "type": "station",
+      "name": "Julius-Leber-Brücke"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Schöneberg"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 114
+      },
+      "type": "station",
+      "name": "Friedenau"
+    },
+    {
+      "coords": {
+        "x": 36,
+        "y": 120
+      },
+      "type": "station",
+      "name": "Feuerbachstraße"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 126
+      },
+      "type": "station",
+      "name": "Rathaus Steglitz"
+    },
+    {
+      "coords": {
+        "x": 31,
+        "y": 130
+      },
+      "type": "station",
+      "name": "Botanischer Garten"
+    },
+    {
+      "coords": {
+        "x": 29,
+        "y": 134
+      },
+      "type": "station",
+      "name": "Lichterfelde West"
+    },
+    {
+      "coords": {
+        "x": 24,
+        "y": 134
+      },
+      "type": "station",
+      "name": "Sundgauer Straße"
+    },
+    {
+      "coords": {
+        "x": 19,
+        "y": 134
+      },
+      "type": "station",
+      "name": "Zehlendorf"
+    },
+    {
+      "coords": {
+        "x": 16,
+        "y": 128
+      },
+      "type": "station",
+      "name": "Mexikoplatz"
+    },
+    {
+      "coords": {
+        "x": 12,
+        "y": 128
+      },
+      "type": "station",
+      "name": "Schlachtensee"
+    },
+    {
+      "coords": {
+        "x": 9,
+        "y": 134
+      },
+      "type": "station",
+      "name": "Nikolassee"
+    },
+    {
+      "coords": {
+        "x": 8,
+        "y": 136
+      },
+      "type": "station",
+      "name": "Wannsee"
+    }
+  ],
+  "s2": [
+    {
+      "coords": {
+        "x": 72,
+        "y": 6
+      },
+      "type": "station",
+      "name": "Bernau"
+    },
+    {
+      "coords": {
+        "x": 71,
+        "y": 8
+      },
+      "type": "station",
+      "name": "Bernau-Friedenstal"
+    },
+    {
+      "coords": {
+        "x": 70,
+        "y": 10
+      },
+      "type": "station",
+      "name": "Zepernick"
+    },
+    {
+      "coords": {
+        "x": 69,
+        "y": 12
+      },
+      "type": "station",
+      "name": "Röntgental"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 14
+      },
+      "type": "station",
+      "name": "Buch"
+    },
+    {
+      "coords": {
+        "x": 67,
+        "y": 16
+      },
+      "type": "station",
+      "name": "Karow"
+    },
+    {
+      "coords": {
+        "x": 64,
+        "y": 22
+      },
+      "type": "station",
+      "name": "Blankenburg"
+    },
+    {
+      "coords": {
+        "x": 62,
+        "y": 26
+      },
+      "type": "station",
+      "name": "Pankow-Heinersdorf"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 30
+      },
+      "type": "station",
+      "name": "Pankow"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 40
+      },
+      "type": "station",
+      "name": "Bornholmer Straße"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 46
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Gesundbrunnen"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 52
+      },
+      "type": "station",
+      "name": "Humboldthain"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 54
+      },
+      "type": "station",
+      "name": "Nordbahnhof"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 58
+      },
+      "type": "station",
+      "name": "Oranienburger Straße"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 62
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 51,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Friedrichstraße"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 70
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Brandenburger Tor"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 78
+      },
+      "type": "station",
+      "name": "Potsdamer Platz"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Anhalter Bahnhof"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 96
+      },
+      "type": "station",
+      "name": "Yorckstraße"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Südkreuz"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 118
+      },
+      "type": "station",
+      "name": "Priesterweg"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 120
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 50,
+        "y": 124
+      },
+      "type": "station",
+      "name": "Attilastraße"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 128
+      },
+      "type": "station",
+      "name": "Marienfelde"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 132
+      },
+      "type": "station",
+      "name": "Buckower Chaussee"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 138
+      },
+      "type": "station",
+      "name": "Schichauweg"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 144
+      },
+      "type": "station",
+      "name": "Lichtenrade"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 148
+      },
+      "type": "station",
+      "name": "Mahlow"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 152
+      },
+      "type": "station",
+      "name": "Blankenfelde"
+    }
+  ],
+  "s25": [
+    {
+      "coords": {
+        "x": 25,
+        "y": 10
+      },
+      "type": "station",
+      "name": "Hennigsdorf"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 14
+      },
+      "type": "station",
+      "name": "Heiligensee"
+    },
+    {
+      "coords": {
+        "x": 28,
+        "y": 16
+      },
+      "type": "station",
+      "name": "Schulzendorf"
+    },
+    {
+      "coords": {
+        "x": 30,
+        "y": 20
+      },
+      "type": "station",
+      "name": "Tegel"
+    },
+    {
+      "coords": {
+        "x": 31,
+        "y": 22
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 22
+      },
+      "type": "station",
+      "name": "Eichborndamm"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 22
+      },
+      "type": "station",
+      "name": "Karl-Bonhoeffer-Nervenklinik"
+    },
+    {
+      "coords": {
+        "x": 42,
+        "y": 22
+      },
+      "type": "station",
+      "name": "Alt-Reinickendorf"
+    },
+    {
+      "coords": {
+        "x": 46,
+        "y": 22
+      },
+      "type": "station",
+      "name": "Schönholz"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 34
+      },
+      "type": "station",
+      "name": "Wollankstraße"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 40
+      },
+      "type": "station",
+      "name": "Bornholmer Straße"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Gesundbrunnen"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 52
+      },
+      "type": "station",
+      "name": "Humboldthain"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 54
+      },
+      "type": "station",
+      "name": "Nordbahnhof"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 58
+      },
+      "type": "station",
+      "name": "Oranienburger Straße"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 62
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 51,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Friedrichstraße"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 70
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Brandenburger Tor"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 78
+      },
+      "type": "station",
+      "name": "Potsdamer Platz"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Anhalter Bahnhof"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 96
+      },
+      "type": "station",
+      "name": "Yorckstraße"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Südkreuz"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 118
+      },
+      "type": "station",
+      "name": "Priesterweg"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 120
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 46,
+        "y": 124
+      },
+      "type": "station",
+      "name": "Südende"
+    },
+    {
+      "coords": {
+        "x": 44,
+        "y": 128
+      },
+      "type": "station",
+      "name": "Lichterfelde Ost"
+    },
+    {
+      "coords": {
+        "x": 41,
+        "y": 134
+      },
+      "type": "station",
+      "name": "Osdorfer Straße"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 140
+      },
+      "type": "station",
+      "name": "Lichterfelde Süd"
+    },
+    {
+      "coords": {
+        "x": 36,
+        "y": 144
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 31,
+        "y": 144
+      },
+      "type": "station",
+      "name": "Teltow Stadt"
+    }
+  ],
+  "s3": [
+    {
+      "coords": {
+        "x": 76,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Ostkreuz"
+    },
+    {
+      "coords": {
+        "x": 79,
+        "y": 82
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 80,
+        "y": 84
+      },
+      "type": "station",
+      "name": "Rummelsburg"
+    },
+    {
+      "coords": {
+        "x": 82,
+        "y": 88
+      },
+      "type": "station",
+      "name": "Betriebsbahnhof Rummelsburg"
+    },
+    {
+      "coords": {
+        "x": 84,
+        "y": 92
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 86,
+        "y": 92
+      },
+      "type": "station",
+      "name": "Karlshorst"
+    },
+    {
+      "coords": {
+        "x": 90,
+        "y": 92
+      },
+      "type": "station",
+      "name": "Wuhlheide"
+    },
+    {
+      "coords": {
+        "x": 92,
+        "y": 96
+      },
+      "type": "station",
+      "name": "Köpenick"
+    },
+    {
+      "coords": {
+        "x": 94,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Hirschgarten"
+    },
+    {
+      "coords": {
+        "x": 96,
+        "y": 104
+      },
+      "type": "station",
+      "name": "Friedrichshagen"
+    },
+    {
+      "coords": {
+        "x": 98,
+        "y": 108
+      },
+      "type": "station",
+      "name": "Rahnsdorf"
+    },
+    {
+      "coords": {
+        "x": 100,
+        "y": 112
+      },
+      "type": "station",
+      "name": "Wilhelmshagen"
+    },
+    {
+      "coords": {
+        "x": 102,
+        "y": 116
+      },
+      "type": "station",
+      "name": "Erkner"
+    }
+  ],
+  "s45": [
+    {
+      "coords": {
+        "x": 48,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Südkreuz"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Tempelhof"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Hermannstraße"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Neukölln"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Köllnische Heide"
+    },
+    {
+      "coords": {
+        "x": 82,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Baumschulenweg"
+    },
+    {
+      "coords": {
+        "x": 84,
+        "y": 110
+      },
+      "type": "station",
+      "name": "Schöneweide"
+    },
+    {
+      "coords": {
+        "x": 86,
+        "y": 114
+      },
+      "type": "station",
+      "name": "Betriebsbahnhof Schöneweide"
+    },
+    {
+      "coords": {
+        "x": 88,
+        "y": 118
+      },
+      "type": "station",
+      "name": "Adlershof"
+    },
+    {
+      "coords": {
+        "x": 88,
+        "y": 128
+      },
+      "type": "station",
+      "name": "Altglienicke"
+    },
+    {
+      "coords": {
+        "x": 85,
+        "y": 134
+      },
+      "type": "station",
+      "name": "Grünbergallee"
+    },
+    {
+      "coords": {
+        "x": 78,
+        "y": 148
+      },
+      "type": "station",
+      "name": "Flughafen Berlin-Schönefeld"
+    }
+  ],
+  "s46": [
+    {
+      "coords": {
+        "x": 22,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Westend"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Westkreuz"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Halensee"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 96
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 23,
+        "y": 98
+      },
+      "type": "station",
+      "name": "Hohenzollerndamm"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Heidelberger Platz"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Bundesplatz"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Innsbrucker Platz"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Schöneberg"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Südkreuz"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Tempelhof"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Hermannstraße"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Neukölln"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Köllnische Heide"
+    },
+    {
+      "coords": {
+        "x": 82,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Baumschulenweg"
+    },
+    {
+      "coords": {
+        "x": 84,
+        "y": 110
+      },
+      "type": "station",
+      "name": "Schöneweide"
+    },
+    {
+      "coords": {
+        "x": 86,
+        "y": 114
+      },
+      "type": "station",
+      "name": "Betriebsbahnhof Schöneweide"
+    },
+    {
+      "coords": {
+        "x": 88,
+        "y": 118
+      },
+      "type": "station",
+      "name": "Adlershof"
+    },
+    {
+      "coords": {
+        "x": 91,
+        "y": 124
+      },
+      "type": "station",
+      "name": "Grünau"
+    },
+    {
+      "coords": {
+        "x": 93,
+        "y": 128
+      },
+      "type": "station",
+      "name": "Eichwalde"
+    },
+    {
+      "coords": {
+        "x": 95,
+        "y": 132
+      },
+      "type": "station",
+      "name": "Zeuthen"
+    },
+    {
+      "coords": {
+        "x": 97,
+        "y": 136
+      },
+      "type": "station",
+      "name": "Wildau"
+    },
+    {
+      "coords": {
+        "x": 99,
+        "y": 140
+      },
+      "type": "station",
+      "name": "Königs Wusterhausen"
+    }
+  ],
+  "s47": [
+    {
+      "coords": {
+        "x": 63,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Hermannstraße"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Neukölln"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Köllnische Heide"
+    },
+    {
+      "coords": {
+        "x": 82,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Baumschulenweg"
+    },
+    {
+      "coords": {
+        "x": 84,
+        "y": 110
+      },
+      "type": "station",
+      "name": "Schöneweide"
+    },
+    {
+      "coords": {
+        "x": 87,
+        "y": 110
+      },
+      "type": "station",
+      "name": "Oberspree"
+    },
+    {
+      "coords": {
+        "x": 90,
+        "y": 110
+      },
+      "type": "station",
+      "name": "Spindlersfeld"
+    }
+  ],
+  "s5": [
+    {
+      "coords": {
+        "x": 3,
+        "y": 56
+      },
+      "type": "station",
+      "name": "Spandau"
+    },
+    {
+      "coords": {
+        "x": 5,
+        "y": 60
+      },
+      "type": "station",
+      "name": "Stresow"
+    },
+    {
+      "coords": {
+        "x": 8,
+        "y": 66
+      },
+      "type": "station",
+      "name": "Pichelsberg"
+    },
+    {
+      "coords": {
+        "x": 10,
+        "y": 70
+      },
+      "type": "station",
+      "name": "Olympiastadion"
+    },
+    {
+      "coords": {
+        "x": 12,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Heerstraße"
+    },
+    {
+      "coords": {
+        "x": 15,
+        "y": 80
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 16,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Messe Süd"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Westkreuz"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Charlottenburg"
+    },
+    {
+      "coords": {
+        "x": 30,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Savignyplatz"
+    },
+    {
+      "coords": {
+        "x": 34,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Zoologischer Garten"
+    },
+    {
+      "coords": {
+        "x": 37,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Tiergarten"
+    },
+    {
+      "coords": {
+        "x": 40,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Bellevue"
+    },
+    {
+      "coords": {
+        "x": 42,
+        "y": 64
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 44,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Hauptbahnhof"
+    },
+    {
+      "coords": {
+        "x": 51,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Friedrichstraße"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Hackescher Markt"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 64
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 62,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Alexanderplatz"
+    },
+    {
+      "coords": {
+        "x": 64,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Jannowitzbrücke"
+    },
+    {
+      "coords": {
+        "x": 66,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Ostbahnhof"
+    },
+    {
+      "coords": {
+        "x": 69,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Warschauer Straße"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Ostkreuz"
+    },
+    {
+      "coords": {
+        "x": 79,
+        "y": 82
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 80,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Nöldnerplatz"
+    },
+    {
+      "coords": {
+        "x": 82,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Lichtenberg"
+    },
+    {
+      "coords": {
+        "x": 84,
+        "y": 72
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 85,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Friedrichsfelde Ost"
+    },
+    {
+      "coords": {
+        "x": 90,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Biesdorf"
+    },
+    {
+      "coords": {
+        "x": 93,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Wuhletal"
+    },
+    {
+      "coords": {
+        "x": 97,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Kaulsdorf"
+    },
+    {
+      "coords": {
+        "x": 101,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Mahlsdorf"
+    },
+    {
+      "coords": {
+        "x": 106,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Birkenstein"
+    },
+    {
+      "coords": {
+        "x": 108,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Hoppegarten"
+    },
+    {
+      "coords": {
+        "x": 109,
+        "y": 70
+      },
+      "type": "station",
+      "name": "Neuenhagen"
+    },
+    {
+      "coords": {
+        "x": 110,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Fredersdorf"
+    },
+    {
+      "coords": {
+        "x": 111,
+        "y": 66
+      },
+      "type": "station",
+      "name": "Petershagen Nord"
+    },
+    {
+      "coords": {
+        "x": 111,
+        "y": 62
+      },
+      "type": "station",
+      "name": "Strausberg"
+    },
+    {
+      "coords": {
+        "x": 111,
+        "y": 58
+      },
+      "type": "station",
+      "name": "Hegermühle"
+    },
+    {
+      "coords": {
+        "x": 111,
+        "y": 54
+      },
+      "type": "station",
+      "name": "Strausberg Stadt"
+    },
+    {
+      "coords": {
+        "x": 111,
+        "y": 50
+      },
+      "type": "station",
+      "name": "Strausberg Nord"
+    }
+  ],
+  "s7": [
+    {
+      "coords": {
+        "x": 0,
+        "y": 152
+      },
+      "type": "station",
+      "name": "Potsdam Hbf"
+    },
+    {
+      "coords": {
+        "x": 2,
+        "y": 148
+      },
+      "type": "station",
+      "name": "Babelsberg"
+    },
+    {
+      "coords": {
+        "x": 5,
+        "y": 142
+      },
+      "type": "station",
+      "name": "Griebnitzsee"
+    },
+    {
+      "coords": {
+        "x": 8,
+        "y": 136
+      },
+      "type": "station",
+      "name": "Wannsee"
+    },
+    {
+      "coords": {
+        "x": 9,
+        "y": 134
+      },
+      "type": "station",
+      "name": "Nikolassee"
+    },
+    {
+      "coords": {
+        "x": 10,
+        "y": 132
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 10,
+        "y": 96
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 13,
+        "y": 90
+      },
+      "type": "station",
+      "name": "Grunewald"
+    },
+    {
+      "coords": {
+        "x": 18,
+        "y": 80
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Westkreuz"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Charlottenburg"
+    },
+    {
+      "coords": {
+        "x": 30,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Savignyplatz"
+    },
+    {
+      "coords": {
+        "x": 34,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Zoologischer Garten"
+    },
+    {
+      "coords": {
+        "x": 37,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Tiergarten"
+    },
+    {
+      "coords": {
+        "x": 40,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Bellevue"
+    },
+    {
+      "coords": {
+        "x": 42,
+        "y": 64
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 44,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Hauptbahnhof"
+    },
+    {
+      "coords": {
+        "x": 51,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Friedrichstraße"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Hackescher Markt"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 64
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 62,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Alexanderplatz"
+    },
+    {
+      "coords": {
+        "x": 64,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Jannowitzbrücke"
+    },
+    {
+      "coords": {
+        "x": 66,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Ostbahnhof"
+    },
+    {
+      "coords": {
+        "x": 69,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Warschauer Straße"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Ostkreuz"
+    },
+    {
+      "coords": {
+        "x": 79,
+        "y": 82
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 80,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Nöldnerplatz"
+    },
+    {
+      "coords": {
+        "x": 82,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Lichtenberg"
+    },
+    {
+      "coords": {
+        "x": 84,
+        "y": 72
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 85,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Friedrichsfelde Ost"
+    },
+    {
+      "coords": {
+        "x": 87,
+        "y": 72
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 87,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Springpfuhl"
+    },
+    {
+      "coords": {
+        "x": 87,
+        "y": 60
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 89,
+        "y": 56
+      },
+      "type": "station",
+      "name": "Poelchaustraße"
+    },
+    {
+      "coords": {
+        "x": 91,
+        "y": 52
+      },
+      "type": "station",
+      "name": "Marzahn"
+    },
+    {
+      "coords": {
+        "x": 93,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Raoul-Wallenberg-Straße"
+    },
+    {
+      "coords": {
+        "x": 95,
+        "y": 44
+      },
+      "type": "station",
+      "name": "Mehrower Allee"
+    },
+    {
+      "coords": {
+        "x": 97,
+        "y": 40
+      },
+      "type": "station",
+      "name": "Ahrensfelde"
+    }
+  ],
+  "s75": [
+    {
+      "coords": {
+        "x": 22,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Westkreuz"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Charlottenburg"
+    },
+    {
+      "coords": {
+        "x": 30,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Savignyplatz"
+    },
+    {
+      "coords": {
+        "x": 34,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Zoologischer Garten"
+    },
+    {
+      "coords": {
+        "x": 37,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Tiergarten"
+    },
+    {
+      "coords": {
+        "x": 40,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Bellevue"
+    },
+    {
+      "coords": {
+        "x": 42,
+        "y": 64
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 44,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Hauptbahnhof"
+    },
+    {
+      "coords": {
+        "x": 51,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Friedrichstraße"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Hackescher Markt"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 64
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 62,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Alexanderplatz"
+    },
+    {
+      "coords": {
+        "x": 64,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Jannowitzbrücke"
+    },
+    {
+      "coords": {
+        "x": 66,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Ostbahnhof"
+    },
+    {
+      "coords": {
+        "x": 69,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Warschauer Straße"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Ostkreuz"
+    },
+    {
+      "coords": {
+        "x": 79,
+        "y": 82
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 80,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Nöldnerplatz"
+    },
+    {
+      "coords": {
+        "x": 82,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Lichtenberg"
+    },
+    {
+      "coords": {
+        "x": 84,
+        "y": 72
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 85,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Friedrichsfelde Ost"
+    },
+    {
+      "coords": {
+        "x": 87,
+        "y": 72
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 87,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Springpfuhl"
+    },
+    {
+      "coords": {
+        "x": 87,
+        "y": 60
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 83,
+        "y": 52
+      },
+      "type": "station",
+      "name": "Gehrenseestraße"
+    },
+    {
+      "coords": {
+        "x": 79,
+        "y": 44
+      },
+      "type": "station",
+      "name": "Hohenschönhausen"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 38
+      },
+      "type": "station",
+      "name": "Wartenberg"
+    }
+  ],
+  "s8": [
+    {
+      "coords": {
+        "x": 38,
+        "y": 6
+      },
+      "type": "station",
+      "name": "Birkenwerder"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 8
+      },
+      "type": "station",
+      "name": "Hohen Neuendorf"
+    },
+    {
+      "coords": {
+        "x": 45,
+        "y": 8
+      },
+      "type": "station",
+      "name": "Bergfelde"
+    },
+    {
+      "coords": {
+        "x": 50,
+        "y": 8
+      },
+      "type": "station",
+      "name": "Schönfließ"
+    },
+    {
+      "coords": {
+        "x": 57,
+        "y": 8
+      },
+      "type": "station",
+      "name": "Mühlenbeck-Mönchmühle"
+    },
+    {
+      "coords": {
+        "x": 61,
+        "y": 8
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 66,
+        "y": 18
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 64,
+        "y": 22
+      },
+      "type": "station",
+      "name": "Blankenburg"
+    },
+    {
+      "coords": {
+        "x": 62,
+        "y": 26
+      },
+      "type": "station",
+      "name": "Pankow-Heinersdorf"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 30
+      },
+      "type": "station",
+      "name": "Pankow"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 40
+      },
+      "type": "station",
+      "name": "Bornholmer Straße"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 44
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 48
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Schönhauser Allee"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Prenzlauer Allee"
+    },
+    {
+      "coords": {
+        "x": 70,
+        "y": 48
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 72,
+        "y": 52
+      },
+      "type": "station",
+      "name": "Greifswalder Straße"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 60
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Landsberger Allee"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 70
+      },
+      "type": "station",
+      "name": "Storkower Straße"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Frankfurter Allee"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Ostkreuz"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Treptower Park"
+    },
+    {
+      "coords": {
+        "x": 79,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Plänterwald"
+    },
+    {
+      "coords": {
+        "x": 82,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Baumschulenweg"
+    },
+    {
+      "coords": {
+        "x": 84,
+        "y": 110
+      },
+      "type": "station",
+      "name": "Schöneweide"
+    },
+    {
+      "coords": {
+        "x": 86,
+        "y": 114
+      },
+      "type": "station",
+      "name": "Betriebsbahnhof Schöneweide"
+    },
+    {
+      "coords": {
+        "x": 88,
+        "y": 118
+      },
+      "type": "station",
+      "name": "Adlershof"
+    },
+    {
+      "coords": {
+        "x": 91,
+        "y": 124
+      },
+      "type": "station",
+      "name": "Grünau"
+    },
+    {
+      "coords": {
+        "x": 93,
+        "y": 128
+      },
+      "type": "station",
+      "name": "Eichwalde"
+    },
+    {
+      "coords": {
+        "x": 95,
+        "y": 132
+      },
+      "type": "station",
+      "name": "Zeuthen"
+    }
+  ],
+  "s85": [
+    {
+      "coords": {
+        "x": 42,
+        "y": 14
+      },
+      "type": "station",
+      "name": "Waidmannslust"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 16
+      },
+      "type": "station",
+      "name": "Wittenau"
+    },
+    {
+      "coords": {
+        "x": 44,
+        "y": 18
+      },
+      "type": "station",
+      "name": "Wilhelmsruh"
+    },
+    {
+      "coords": {
+        "x": 46,
+        "y": 22
+      },
+      "type": "station",
+      "name": "Schönholz"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 34
+      },
+      "type": "station",
+      "name": "Wollankstraße"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 40
+      },
+      "type": "station",
+      "name": "Bornholmer Straße"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 44
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 48
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Schönhauser Allee"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Prenzlauer Allee"
+    },
+    {
+      "coords": {
+        "x": 70,
+        "y": 48
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 72,
+        "y": 52
+      },
+      "type": "station",
+      "name": "Greifswalder Straße"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 60
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Landsberger Allee"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 70
+      },
+      "type": "station",
+      "name": "Storkower Straße"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Frankfurter Allee"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Ostkreuz"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Treptower Park"
+    },
+    {
+      "coords": {
+        "x": 79,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Plänterwald"
+    },
+    {
+      "coords": {
+        "x": 82,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Baumschulenweg"
+    },
+    {
+      "coords": {
+        "x": 84,
+        "y": 110
+      },
+      "type": "station",
+      "name": "Schöneweide"
+    },
+    {
+      "coords": {
+        "x": 86,
+        "y": 114
+      },
+      "type": "station",
+      "name": "Betriebsbahnhof Schöneweide"
+    },
+    {
+      "coords": {
+        "x": 88,
+        "y": 118
+      },
+      "type": "station",
+      "name": "Adlershof"
+    },
+    {
+      "coords": {
+        "x": 91,
+        "y": 124
+      },
+      "type": "station",
+      "name": "Grünau"
+    }
+  ],
+  "s9": [
+    {
+      "coords": {
+        "x": 60,
+        "y": 30
+      },
+      "type": "station",
+      "name": "Pankow"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 40
+      },
+      "type": "station",
+      "name": "Bornholmer Straße"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 44
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 48
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Schönhauser Allee"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Prenzlauer Allee"
+    },
+    {
+      "coords": {
+        "x": 70,
+        "y": 48
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 72,
+        "y": 52
+      },
+      "type": "station",
+      "name": "Greifswalder Straße"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 60
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Landsberger Allee"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 70
+      },
+      "type": "station",
+      "name": "Storkower Straße"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Frankfurter Allee"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Ostkreuz"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Treptower Park"
+    },
+    {
+      "coords": {
+        "x": 79,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Plänterwald"
+    },
+    {
+      "coords": {
+        "x": 82,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Baumschulenweg"
+    },
+    {
+      "coords": {
+        "x": 84,
+        "y": 110
+      },
+      "type": "station",
+      "name": "Schöneweide"
+    },
+    {
+      "coords": {
+        "x": 86,
+        "y": 114
+      },
+      "type": "station",
+      "name": "Betriebsbahnhof Schöneweide"
+    },
+    {
+      "coords": {
+        "x": 88,
+        "y": 118
+      },
+      "type": "station",
+      "name": "Adlershof"
+    },
+    {
+      "coords": {
+        "x": 88,
+        "y": 128
+      },
+      "type": "station",
+      "name": "Altglienicke"
+    },
+    {
+      "coords": {
+        "x": 85,
+        "y": 134
+      },
+      "type": "station",
+      "name": "Grünbergallee"
+    },
+    {
+      "coords": {
+        "x": 78,
+        "y": 148
+      },
+      "type": "station",
+      "name": "Flughafen Berlin-Schönefeld"
+    }
+  ],
+  "u1": [
+    {
+      "coords": {
+        "x": 31,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Uhlandstraße"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Kurfürstendamm"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Wittenbergplatz"
+    },
+    {
+      "coords": {
+        "x": 41,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Nollendorfplatz"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Kurfürstenstraße"
+    },
+    {
+      "coords": {
+        "x": 45,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Gleisdreieck"
+    },
+    {
+      "coords": {
+        "x": 50,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Möckernbrücke"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Hallesches Tor"
+    },
+    {
+      "coords": {
+        "x": 58,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Prinzenstraße"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Kottbusser Tor"
+    },
+    {
+      "coords": {
+        "x": 65,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Görlitzer Bahnhof"
+    },
+    {
+      "coords": {
+        "x": 67,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Schlesisches Tor"
+    },
+    {
+      "coords": {
+        "x": 69,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Warschauer Straße"
+    }
+  ],
+  "u2": [
+    {
+      "coords": {
+        "x": 11,
+        "y": 62
+      },
+      "type": "station",
+      "name": "Ruhleben"
+    },
+    {
+      "coords": {
+        "x": 13,
+        "y": 66
+      },
+      "type": "station",
+      "name": "Olympia-Stadion"
+    },
+    {
+      "coords": {
+        "x": 15,
+        "y": 70
+      },
+      "type": "station",
+      "name": "Neu-Westend"
+    },
+    {
+      "coords": {
+        "x": 17,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Theodor-Heuss-Platz"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Kaiserdamm"
+    },
+    {
+      "coords": {
+        "x": 25,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Sophie-Charlotte-Platz"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Bismarckstraße"
+    },
+    {
+      "coords": {
+        "x": 29,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Deutsche Oper"
+    },
+    {
+      "coords": {
+        "x": 31,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Ernst-Reuter-Platz"
+    },
+    {
+      "coords": {
+        "x": 34,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Zoologischer Garten"
+    },
+    {
+      "coords": {
+        "x": 37,
+        "y": 86
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Wittenbergplatz"
+    },
+    {
+      "coords": {
+        "x": 41,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Nollendorfplatz"
+    },
+    {
+      "coords": {
+        "x": 42,
+        "y": 88
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 88
+      },
+      "type": "station",
+      "name": "Bülowstraße"
+    },
+    {
+      "coords": {
+        "x": 44,
+        "y": 88
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 45,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Gleisdreieck"
+    },
+    {
+      "coords": {
+        "x": 46,
+        "y": 84
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 46,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Mendelssohn-Bartholdy-Park"
+    },
+    {
+      "coords": {
+        "x": 46,
+        "y": 78
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 78
+      },
+      "type": "station",
+      "name": "Potsdamer Platz"
+    },
+    {
+      "coords": {
+        "x": 50,
+        "y": 78
+      },
+      "type": "station",
+      "name": "Mohrenstraße"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 78
+      },
+      "type": "station",
+      "name": "Stadtmitte"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 78
+      },
+      "type": "station",
+      "name": "Hausvogteiplatz"
+    },
+    {
+      "coords": {
+        "x": 58,
+        "y": 78
+      },
+      "type": "station",
+      "name": "Spittelmarkt"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 78
+      },
+      "type": "station",
+      "name": "Märkisches Museum"
+    },
+    {
+      "coords": {
+        "x": 62,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Klosterstraße"
+    },
+    {
+      "coords": {
+        "x": 62,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Alexanderplatz"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 64
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 60
+      },
+      "type": "station",
+      "name": "Rosa-Luxemburg-Platz"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 56
+      },
+      "type": "station",
+      "name": "Senefelderplatz"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 52
+      },
+      "type": "station",
+      "name": "Eberswalder Straße"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Schönhauser Allee"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 38
+      },
+      "type": "station",
+      "name": "Vinetastraße"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 30
+      },
+      "type": "station",
+      "name": "Pankow"
+    }
+  ],
+  "u3": [
+    {
+      "coords": {
+        "x": 17,
+        "y": 126
+      },
+      "type": "station",
+      "name": "Krumme Lanke"
+    },
+    {
+      "coords": {
+        "x": 18,
+        "y": 124
+      },
+      "type": "station",
+      "name": "Onkel Toms Hütte"
+    },
+    {
+      "coords": {
+        "x": 19,
+        "y": 122
+      },
+      "type": "station",
+      "name": "Oskar-Helene-Heim"
+    },
+    {
+      "coords": {
+        "x": 21,
+        "y": 118
+      },
+      "type": "station",
+      "name": "Thielplatz"
+    },
+    {
+      "coords": {
+        "x": 22,
+        "y": 116
+      },
+      "type": "station",
+      "name": "Dahlem-Dorf"
+    },
+    {
+      "coords": {
+        "x": 23,
+        "y": 114
+      },
+      "type": "station",
+      "name": "Podbielskiallee"
+    },
+    {
+      "coords": {
+        "x": 24,
+        "y": 112
+      },
+      "type": "station",
+      "name": "Breitenbachplatz"
+    },
+    {
+      "coords": {
+        "x": 25,
+        "y": 110
+      },
+      "type": "station",
+      "name": "Rüdesheimer Platz"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Heidelberger Platz"
+    },
+    {
+      "coords": {
+        "x": 28,
+        "y": 102
+      },
+      "type": "station",
+      "name": "Hohenzollernplatz"
+    },
+    {
+      "coords": {
+        "x": 30,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Fehrbelliner Platz"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Spichernstraße"
+    },
+    {
+      "coords": {
+        "x": 35,
+        "y": 90
+      },
+      "type": "station",
+      "name": "Augsburger Straße"
+    },
+    {
+      "coords": {
+        "x": 37,
+        "y": 86
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Wittenbergplatz"
+    },
+    {
+      "coords": {
+        "x": 41,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Nollendorfplatz"
+    }
+  ],
+  "u4": [
+    {
+      "coords": {
+        "x": 39,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Innsbrucker Platz"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 104
+      },
+      "type": "station",
+      "name": "Rathaus Schöneberg"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Bayerischer Platz"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Viktoria-Luise-Platz"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 86
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 41,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Nollendorfplatz"
+    }
+  ],
+  "u5": [
+    {
+      "coords": {
+        "x": 62,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Alexanderplatz"
+    },
+    {
+      "coords": {
+        "x": 67,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Schillingstraße"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 70
+      },
+      "type": "station",
+      "name": "Strausberger Platz"
+    },
+    {
+      "coords": {
+        "x": 69,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Weberwiese"
+    },
+    {
+      "coords": {
+        "x": 70,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Frankfurter Tor"
+    },
+    {
+      "coords": {
+        "x": 71,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Samariterstraße"
+    },
+    {
+      "coords": {
+        "x": 76,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Frankfurter Allee"
+    },
+    {
+      "coords": {
+        "x": 79,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Magdalenenstraße"
+    },
+    {
+      "coords": {
+        "x": 82,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Lichtenberg"
+    },
+    {
+      "coords": {
+        "x": 84,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Friedrichsfelde"
+    },
+    {
+      "coords": {
+        "x": 87,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Tierpark"
+    },
+    {
+      "coords": {
+        "x": 89,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Biesdorf-Süd"
+    },
+    {
+      "coords": {
+        "x": 91,
+        "y": 76
+      },
+      "type": "station",
+      "name": "Elsterwerdaer Platz"
+    },
+    {
+      "coords": {
+        "x": 93,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Wuhletal"
+    },
+    {
+      "coords": {
+        "x": 95,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Kaulsdorf-Nord"
+    },
+    {
+      "coords": {
+        "x": 96,
+        "y": 66
+      },
+      "type": "station",
+      "name": "Neue Grottkauer Straße"
+    },
+    {
+      "coords": {
+        "x": 97,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Cottbusser Platz"
+    },
+    {
+      "coords": {
+        "x": 98,
+        "y": 62
+      },
+      "type": "station",
+      "name": "Hellersdorf"
+    },
+    {
+      "coords": {
+        "x": 99,
+        "y": 60
+      },
+      "type": "station",
+      "name": "Louis-Lewin-Straße"
+    },
+    {
+      "coords": {
+        "x": 100,
+        "y": 58
+      },
+      "type": "station",
+      "name": "Hönow"
+    }
+  ],
+  "u55": [
+    {
+      "coords": {
+        "x": 44,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Hauptbahnhof"
+    },
+    {
+      "coords": {
+        "x": 46,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Bundestag"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Brandenburger Tor"
+    }
+  ],
+  "u6": [
+    {
+      "coords": {
+        "x": 30,
+        "y": 20
+      },
+      "type": "station",
+      "name": "Alt-Tegel"
+    },
+    {
+      "coords": {
+        "x": 30,
+        "y": 22
+      },
+      "type": "station",
+      "name": "Borsigwerke"
+    },
+    {
+      "coords": {
+        "x": 31,
+        "y": 24
+      },
+      "type": "station",
+      "name": "Holzhauser Straße"
+    },
+    {
+      "coords": {
+        "x": 32,
+        "y": 26
+      },
+      "type": "station",
+      "name": "Otisstraße"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 28
+      },
+      "type": "station",
+      "name": "Scharnweberstraße"
+    },
+    {
+      "coords": {
+        "x": 34,
+        "y": 30
+      },
+      "type": "station",
+      "name": "Kurt-Schumacher-Platz"
+    },
+    {
+      "coords": {
+        "x": 35,
+        "y": 32
+      },
+      "type": "station",
+      "name": "Afrikanische Straße"
+    },
+    {
+      "coords": {
+        "x": 37,
+        "y": 36
+      },
+      "type": "station",
+      "name": "Rehberge"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 38
+      },
+      "type": "station",
+      "name": "Seestraße"
+    },
+    {
+      "coords": {
+        "x": 40,
+        "y": 42
+      },
+      "type": "station",
+      "name": "Leopoldplatz"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Wedding"
+    },
+    {
+      "coords": {
+        "x": 44,
+        "y": 50
+      },
+      "type": "station",
+      "name": "Reinickendorfer Straße"
+    },
+    {
+      "coords": {
+        "x": 46,
+        "y": 54
+      },
+      "type": "station",
+      "name": "Schwartzkopffstraße"
+    },
+    {
+      "coords": {
+        "x": 47,
+        "y": 56
+      },
+      "type": "station",
+      "name": "Naturkundemuseum"
+    },
+    {
+      "coords": {
+        "x": 49,
+        "y": 60
+      },
+      "type": "station",
+      "name": "Oranienburger Tor"
+    },
+    {
+      "coords": {
+        "x": 51,
+        "y": 64
+      },
+      "type": "station",
+      "name": "Friedrichstraße"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 68
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Französische Straße"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 78
+      },
+      "type": "station",
+      "name": "Stadtmitte"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Kochstraße"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Hallesches Tor"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 92
+      },
+      "type": "station",
+      "name": "Mehringdamm"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 98
+      },
+      "type": "station",
+      "name": "Platz der Luftbrücke"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 102
+      },
+      "type": "station",
+      "name": "Paradestraße"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Tempelhof"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 108
+      },
+      "type": "station",
+      "name": "Alt-Tempelhof"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 110
+      },
+      "type": "station",
+      "name": "Kaiserin-Augusta-Straße"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 112
+      },
+      "type": "station",
+      "name": "Ullsteinstraße"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 114
+      },
+      "type": "station",
+      "name": "Westphalweg"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 116
+      },
+      "type": "station",
+      "name": "Alt-Mariendorf"
+    }
+  ],
+  "u7": [
+    {
+      "coords": {
+        "x": 3,
+        "y": 56
+      },
+      "type": "station",
+      "name": "Rathaus Spandau"
+    },
+    {
+      "coords": {
+        "x": 5,
+        "y": 52
+      },
+      "type": "station",
+      "name": "Altstadt Spandau"
+    },
+    {
+      "coords": {
+        "x": 7,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Zitadelle"
+    },
+    {
+      "coords": {
+        "x": 11,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Haselhorst"
+    },
+    {
+      "coords": {
+        "x": 14,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Paulsternstraße"
+    },
+    {
+      "coords": {
+        "x": 18,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Rohrdamm"
+    },
+    {
+      "coords": {
+        "x": 21,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Siemensdamm"
+    },
+    {
+      "coords": {
+        "x": 23,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Halemweg"
+    },
+    {
+      "coords": {
+        "x": 25,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Jakob-Kaiser-Platz"
+    },
+    {
+      "coords": {
+        "x": 26,
+        "y": 50
+      },
+      "type": "station",
+      "name": "Jungfernheide"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 52
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 60
+      },
+      "type": "station",
+      "name": "Mierendorffplatz"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Richard-Wagner-Platz"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 74
+      },
+      "type": "station",
+      "name": "Bismarckstraße"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Wilmersdorfer Straße"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 88
+      },
+      "type": "station",
+      "name": "Adenauerplatz"
+    },
+    {
+      "coords": {
+        "x": 27,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Konstanzer Straße"
+    },
+    {
+      "coords": {
+        "x": 30,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Fehrbelliner Platz"
+    },
+    {
+      "coords": {
+        "x": 31,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Blissestraße"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Berliner Straße"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Bayerischer Platz"
+    },
+    {
+      "coords": {
+        "x": 41,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Eisenacher Straße"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Kleistpark"
+    },
+    {
+      "coords": {
+        "x": 46,
+        "y": 100
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 96
+      },
+      "type": "station",
+      "name": "Yorckstraße"
+    },
+    {
+      "coords": {
+        "x": 49,
+        "y": 94
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 49,
+        "y": 86
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 50,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Möckernbrücke"
+    },
+    {
+      "coords": {
+        "x": 51,
+        "y": 86
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 90
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 92
+      },
+      "type": "station",
+      "name": "Mehringdamm"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 94
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 56,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Gneisenaustraße"
+    },
+    {
+      "coords": {
+        "x": 60,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Südstern"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Hermannplatz"
+    },
+    {
+      "coords": {
+        "x": 65,
+        "y": 94
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 67,
+        "y": 98
+      },
+      "type": "station",
+      "name": "Rathaus Neukölln"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Karl-Marx-Straße"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Neukölln"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 110
+      },
+      "type": "station",
+      "name": "Grenzallee"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 114
+      },
+      "type": "station",
+      "name": "Blaschkoallee"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 118
+      },
+      "type": "station",
+      "name": "Parchimer Allee"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 122
+      },
+      "type": "station",
+      "name": "Britz-Süd"
+    },
+    {
+      "coords": {
+        "x": 68,
+        "y": 126
+      },
+      "type": "station",
+      "name": "Johannisthaler Chaussee"
+    },
+    {
+      "coords": {
+        "x": 70,
+        "y": 130
+      },
+      "type": "station",
+      "name": "Lipschitzallee"
+    },
+    {
+      "coords": {
+        "x": 71,
+        "y": 132
+      },
+      "type": "station",
+      "name": "Wutzkyallee"
+    },
+    {
+      "coords": {
+        "x": 73,
+        "y": 136
+      },
+      "type": "station",
+      "name": "Zwickauer Damm"
+    },
+    {
+      "coords": {
+        "x": 74,
+        "y": 138
+      },
+      "type": "station",
+      "name": "Rudow"
+    }
+  ],
+  "u8": [
+    {
+      "coords": {
+        "x": 43,
+        "y": 16
+      },
+      "type": "station",
+      "name": "Wittenau"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 16
+      },
+      "type": "station",
+      "name": "Rathaus Reinickendorf"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 22
+      },
+      "type": "station",
+      "name": "Karl-Bonhoeffer-Nervenklinik"
+    },
+    {
+      "coords": {
+        "x": 40,
+        "y": 24
+      },
+      "type": "station",
+      "name": "Lindauer Allee"
+    },
+    {
+      "coords": {
+        "x": 41,
+        "y": 26
+      },
+      "type": "station",
+      "name": "Paracelsus-Bad"
+    },
+    {
+      "coords": {
+        "x": 42,
+        "y": 28
+      },
+      "type": "station",
+      "name": "Residenzstraße"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 30
+      },
+      "type": "station",
+      "name": "Franz-Neumann-Platz"
+    },
+    {
+      "coords": {
+        "x": 46,
+        "y": 36
+      },
+      "type": "station",
+      "name": "Osloer Straße"
+    },
+    {
+      "coords": {
+        "x": 48,
+        "y": 40
+      },
+      "type": "station",
+      "name": "Pankstraße"
+    },
+    {
+      "coords": {
+        "x": 52,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Gesundbrunnen"
+    },
+    {
+      "coords": {
+        "x": 53,
+        "y": 50
+      },
+      "type": "station",
+      "name": "Voltastraße"
+    },
+    {
+      "coords": {
+        "x": 55,
+        "y": 54
+      },
+      "type": "station",
+      "name": "Bernauer Straße"
+    },
+    {
+      "coords": {
+        "x": 56,
+        "y": 56
+      },
+      "type": "station",
+      "name": "Rosenthaler Platz"
+    },
+    {
+      "coords": {
+        "x": 58,
+        "y": 60
+      },
+      "type": "station",
+      "name": "Weinmeisterstraße"
+    },
+    {
+      "coords": {
+        "x": 62,
+        "y": 68
+      },
+      "type": "station",
+      "name": "Alexanderplatz"
+    },
+    {
+      "coords": {
+        "x": 64,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Jannowitzbrücke"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 74
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 78
+      },
+      "type": "station",
+      "name": "Heinrich-Heine-Straße"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 82
+      },
+      "type": "station",
+      "name": "Moritzplatz"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Kottbusser Tor"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 90
+      },
+      "type": "station",
+      "name": "Schönleinstraße"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Hermannplatz"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 98
+      },
+      "type": "station",
+      "name": "Boddinstraße"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 102
+      },
+      "type": "station",
+      "name": "Leinestraße"
+    },
+    {
+      "coords": {
+        "x": 63,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Hermannstraße"
+    }
+  ],
+  "u9": [
+    {
+      "coords": {
+        "x": 46,
+        "y": 36
+      },
+      "type": "station",
+      "name": "Osloer Straße"
+    },
+    {
+      "coords": {
+        "x": 43,
+        "y": 36
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 42,
+        "y": 38
+      },
+      "type": "station",
+      "name": "Nauener Platz"
+    },
+    {
+      "coords": {
+        "x": 40,
+        "y": 42
+      },
+      "type": "station",
+      "name": "Leopoldplatz"
+    },
+    {
+      "coords": {
+        "x": 39,
+        "y": 44
+      },
+      "type": "station",
+      "name": "Amrumer Straße"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 46
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 48
+      },
+      "type": "station",
+      "name": "Westhafen"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 54
+      },
+      "type": "station",
+      "name": "Birkenstraße"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 60
+      },
+      "type": "station",
+      "name": "Turmstraße"
+    },
+    {
+      "coords": {
+        "x": 38,
+        "y": 72
+      },
+      "type": "station",
+      "name": "Hansaplatz"
+    },
+    {
+      "coords": {
+        "x": 34,
+        "y": 80
+      },
+      "type": "station",
+      "name": "Zoologischer Garten"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 82
+      },
+      "type": "wp"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 86
+      },
+      "type": "station",
+      "name": "Kurfürstendamm"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 94
+      },
+      "type": "station",
+      "name": "Spichernstraße"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 96
+      },
+      "type": "station",
+      "name": "Güntzelstraße"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 100
+      },
+      "type": "station",
+      "name": "Berliner Straße"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 106
+      },
+      "type": "station",
+      "name": "Bundesplatz"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 112
+      },
+      "type": "station",
+      "name": "Friedrich-Wilhelm-Platz"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 116
+      },
+      "type": "station",
+      "name": "Walther-Schreiber-Platz"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 120
+      },
+      "type": "station",
+      "name": "Schloßstraße"
+    },
+    {
+      "coords": {
+        "x": 33,
+        "y": 126
+      },
+      "type": "station",
+      "name": "Rathaus Steglitz"
+    }
+  ]
 }
 	;
 	var netSBahn =
@@ -290,9 +4739,9 @@
 	for (var key in lines) {
 		var line = lines[key];
 		for (var index = 0; index < line.length; ++index) {
-			var point = line[index];
-			maxX = Math.max(maxX, point[0]);
-			maxY = Math.max(maxY, point[1]);
+			var coords = line[index].coords;
+			maxX = Math.max(maxX, coords.x);
+			maxY = Math.max(maxY, coords.y);
 		}
 	}
 	++maxX;
@@ -325,12 +4774,12 @@
 		for (var key in lines) {
 			var line = lines[key];
 			for (var index = 0; index < line.length; ++index) {
-				var point = line[index];
-				if (y === point[1]) {
+				var coords = line[index].coords;
+				if (y === coords.y) {
 					if ('u' === key.substr(0, 1)) {
-						++stationsU[point[0]];
+						++stationsU[coords.x];
 					} else {
-						++stationsS[point[0]];
+						++stationsS[coords.x];
 					}
 				}
 			}
