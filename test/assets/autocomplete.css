@@ -1,21 +1,21 @@
 .autocomplete-suggestions {
     font-family: Helvetica;
     box-sizing: border-box;
-    background: rgba(0,0,0,0.8);
+    background: rgba(55,55,55,0.95);
     color: #fff;
     overflow: auto;
     cursor: default;
-    font-size: 100%;
+    font-size: 150%;
     border: 1px solid #fff;
     margin-top: -1px;
 }
 .autocomplete-suggestion {
-    padding: 3px 3px;
+    padding: 5px 3px;
     white-space: nowrap;
     overflow: hidden;
 }
 .autocomplete-no-suggestion {
-    padding: 3px 3px;
+    padding: 5px 3px;
 }
 .autocomplete-selected {
     background: rgba(0,0,0,0.4);

@@ -6,6 +6,53 @@
 	<meta name="msapplication-tap-highlight" content="no" />
 	<link rel="stylesheet" type="text/css" href="./assets/autocomplete.css">
 	<style>
+body{
+	font-size: 100%;
+	font-family: Helvetica;
+}
+
+form{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: rgba(0,0,0,0.5);
+	width: 300px;
+	border-radius: 10px;
+}
+
+.station{
+	display: block;
+	margin: 7.5px auto;
+	color: #fff;
+	height: 3ex;
+	width: 285px;
+	background: #444;
+	border: none;
+	border: 1px solid #eee;
+	font-size: 150%;
+	padding: 0 .25em;
+	border-radius: 5px;
+}
+
+#submit{
+	display: block;
+	margin: 7.5px auto;
+	color: #fff;
+	width: 285px;
+	height: 3ex;
+	background: #282828;
+	border: 1px solid #eee;
+	font-size: 150%;
+	padding: 0 .25em;
+	border-radius: 5px;
+}
+
+#submit:hover{
+	background: rgba(0,0,0,0.75);
+}
+
 #map {
 	margin: 80px 0 0 0;
 }
@@ -23,10 +70,15 @@
 	position: absolute;
 	bottom: 0;
 }
+
+#error{
+	color: #f60;
+}
 	</style>
 </head>
 <body>
 	<div id="map"></div>
+	<p id="error"></p>
 	<form id="routing" action="#">
 		<input type="text" class="station" id="from-station" placeholder="Startbahnhof">
 		<input type="text" class="station" id="to-station" placeholder="Zielbahnhof">

@@ -1,3 +1,7 @@
+function error(message){
+	$('#error').html(message)
+}
+
 function firstN(list, n){
 	counter = 0
 	result = []
@@ -37,10 +41,10 @@ function getRoute(from, to){
         url: 'https://transport.rest/routes?from='+from+'&to='+to,
         dataType: 'json',
         success: function(res){
-            console.log(res)
+            if(!res||res.length==0) error('Keine Routen gefunden.')
         },
         error: function(data){
-            console.log('Fehler beim Abfragen der Routendaten.')
+            error('Fehler beim Abfragen der Routen.')
         }
     })
 }
@@ -50,7 +54,7 @@ $(sel).autocomplete({
   serviceUrl: 'https://transport.rest/locations',
   paramName: 'query',
   params: {
-  	results: 40
+  	results: 50
   },
   minChars: 3,
   transformResult: function(response) {
@@ -78,7 +82,8 @@ $('.station').focusout(function(){
 })
 
 $('#submit').click(() => {
-	if(!+$('#from-station').attr('value')||!+$('#to-station').attr('value')) console.log('Bitte geben Sie einen gültigen Start- und Zielbahnhof an.')
+	error(null)
+	if(!+$('#from-station').attr('value')||!+$('#to-station').attr('value')) error('Bitte geben Sie einen gültigen Start- und Zielbahnhof an.')
 	else{
 		from = +$('#from-station').attr('value')
 		to = +$('#to-station').attr('value')
