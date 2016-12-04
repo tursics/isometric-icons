@@ -238,8 +238,8 @@ function composeMap(lines, netSBahn, netUBahn) {
 }
 
 function load() {
-//	ajax('https://cdn.rawgit.com/juliuste/ca37f19122407ef710a2c6322306af11/raw/a559056d82b99400b0ff4f868088445614722130/lines2.json', function(lines) {
-	ajax('lines.json', function(lines) {
+	ajax('https://cdn.rawgit.com/juliuste/ca37f19122407ef710a2c6322306af11/raw/a559056d82b99400b0ff4f868088445614722130/lines2.json', function(lines) {
+//	ajax('lines.json', function(lines) {
 		ajax('netSBahn.json', function(netSBahn) {
 			ajax('netUBahn.json', function(netUBahn) {
 				composeMap(lines, netSBahn, netUBahn);
