@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="msapplication-tap-highlight" content="no" />
+	<link rel="stylesheet" type="text/css" href="./assets/autocomplete.css">
 	<style>
 #map {
 	margin: 80px 0 0 0;
@@ -26,6 +27,15 @@
 </head>
 <body>
 	<div id="map"></div>
+	<form id="routing" action="#">
+		<input type="text" class="station" id="from-station" placeholder="Startbahnhof">
+		<input type="text" class="station" id="to-station" placeholder="Zielbahnhof">
+		<input type="submit" id="submit" value="Los!">
+	</form>
+	<script src="./assets/jquery.js"></script>
+	<script src="./assets/jquery.autocomplete.js"></script>
+	<script src="./assets/lodash.js"></script>
 	<script data-main="scripts/app" src="index.js"></script>
+	<script src="routing.js"></script>
 </body>
 </html>

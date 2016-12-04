@@ -1,0 +1,34 @@
+.autocomplete-suggestions {
+    font-family: Helvetica;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    overflow: auto;
+    cursor: default;
+    font-size: 100%;
+    border: 1px solid #fff;
+    margin-top: -1px;
+}
+.autocomplete-suggestion {
+    padding: 3px 3px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.autocomplete-no-suggestion {
+    padding: 3px 3px;
+}
+.autocomplete-selected {
+    background: rgba(0,0,0,0.4);
+}
+.autocomplete-suggestions strong {
+    font-weight: normal;
+}
+.autocomplete-group {
+    padding: 3px 3px;
+}
+.autocomplete-group strong {
+    font-weight: bold;
+    font-size: 100%;
+    display: block;
+    border-bottom: 1px solid #fff;
+}
