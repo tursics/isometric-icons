@@ -41,9 +41,25 @@ function getTransportationTile(chr, item) {
 		return '../transportTiles/transportTilesRW' + item + 'bahn.png';
 	case '+':
 		return '../transportTiles/transportTilesTRBL' + item + 'bahn.png';
+	case 'x':
+		return '../transportTiles/transportTilesNESW' + item + 'bahn.png';
 	}
 
 	return '../cityTiles/cityTiles_072.png';
+}
+
+function getTransportationTileBoth(chrS, chrU) {
+	'use strict';
+
+	var chr = chrS + chrU;
+	switch (chr) {
+	case '|-':
+		return '../transportTiles/transportTilesTRBLsubahn.png';
+	case '-|':
+		return '../transportTiles/transportTilesTRBLusbahn.png';
+	}
+
+	return getTransportationTile(chrS, 's');
 }
 
 function composeMap(lines, netSBahn, netUBahn) {
@@ -69,7 +85,9 @@ function composeMap(lines, netSBahn, netUBahn) {
 		for (x = 0; x < maxX; ++x) {
 			img = '../cityTiles/cityTiles_072.png';
 
-			if ((typeof netSBahn[y] !== 'undefined') && (typeof netSBahn[y][x] !== 'undefined') && (netSBahn[y][x] !== ' ')) {
+			if ((typeof netSBahn[y] !== 'undefined') && (typeof netSBahn[y][x] !== 'undefined') && (netSBahn[y][x] !== ' ') && (typeof netUBahn[y] !== 'undefined') && (typeof netUBahn[y][x] !== 'undefined') && (netUBahn[y][x] !== ' ')) {
+				img = getTransportationTileBoth(netSBahn[y][x], netUBahn[y][x]);
+			} else if ((typeof netSBahn[y] !== 'undefined') && (typeof netSBahn[y][x] !== 'undefined') && (netSBahn[y][x] !== ' ')) {
 				img = getTransportationTile(netSBahn[y][x], 's');
 			} else if ((typeof netUBahn[y] !== 'undefined') && (typeof netUBahn[y][x] !== 'undefined') && (netUBahn[y][x] !== ' ')) {
 				img = getTransportationTile(netUBahn[y][x], 'u');
