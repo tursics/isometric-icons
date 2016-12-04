@@ -23,23 +23,23 @@ function getRandomTile() {
 	'use strict';
 
 	var items = [
-		'../landscapeTiles/landscapeTiles_059.png',
-		'../landscapeTiles/landscapeTiles_067.png',
-		'../landscapeTiles/landscapeTiles_067.png',
-		'../landscapeTiles/landscapeTiles_067.png',
-		'../cityTiles/cityTiles_043.png',
-		'../cityTiles/cityTiles_051.png',
-		'../cityTiles/cityTiles_059.png',
-		'../cityTiles/cityTiles_067.png',
-		'../cityTiles/cityTiles_067.png',
-		'../cityTiles/cityTiles_067.png',
-		'../buildingTiles/buildingTiles_001.png',
-		'../buildingTiles/buildingTiles_004.png',
-		'../buildingTiles/buildingTiles_014.png',
-		'../buildingTiles/buildingTiles_020.png',
-		'../buildingTiles/buildingTiles_034.png',
-		'../buildingTiles/buildingTiles_099.png',
-		'../cityTiles/cityTiles_072.png'
+		'landscapeTiles/landscapeTiles_059.png',
+		'landscapeTiles/landscapeTiles_067.png',
+		'landscapeTiles/landscapeTiles_067.png',
+		'landscapeTiles/landscapeTiles_067.png',
+		'cityTiles/cityTiles_043.png',
+		'cityTiles/cityTiles_051.png',
+		'cityTiles/cityTiles_059.png',
+		'cityTiles/cityTiles_067.png',
+		'cityTiles/cityTiles_067.png',
+		'cityTiles/cityTiles_067.png',
+		'buildingTiles/buildingTiles_001.png',
+		'buildingTiles/buildingTiles_004.png',
+		'buildingTiles/buildingTiles_014.png',
+		'buildingTiles/buildingTiles_020.png',
+		'buildingTiles/buildingTiles_034.png',
+		'buildingTiles/buildingTiles_099.png',
+		'cityTiles/cityTiles_072.png'
 	];
 	return items[Math.floor(Math.random()*items.length)];
 }
@@ -49,30 +49,30 @@ function getTransportationTile(chr, item) {
 
 	switch (chr) {
 	case '-':
-		return '../transportTiles/transportTilesRL' + item + 'bahn.png';
+		return 'transportTiles/transportTilesRL' + item + 'bahn.png';
 	case '|':
-		return '../transportTiles/transportTilesTB' + item + 'bahn.png';
+		return 'transportTiles/transportTilesTB' + item + 'bahn.png';
 	case '/':
-		return '../transportTiles/transportTilesNS' + item + 'bahn.png';
+		return 'transportTiles/transportTilesNS' + item + 'bahn.png';
 	case ';':
-		return '../transportTiles/transportTilesEW' + item + 'bahn.png';
+		return 'transportTiles/transportTilesEW' + item + 'bahn.png';
 	case '.':
-		return '../transportTiles/transportTilesRS' + item + 'bahn.png';
+		return 'transportTiles/transportTilesRS' + item + 'bahn.png';
 	case ',':
-		return '../transportTiles/transportTilesEL' + item + 'bahn.png';
+		return 'transportTiles/transportTilesEL' + item + 'bahn.png';
 	case '`':
-		return '../transportTiles/transportTilesBW' + item + 'bahn.png';
+		return 'transportTiles/transportTilesBW' + item + 'bahn.png';
 	case 'l':
-		return '../transportTiles/transportTilesTE' + item + 'bahn.png';
+		return 'transportTiles/transportTilesTE' + item + 'bahn.png';
 	case 'v':
-		return '../transportTiles/transportTilesRW' + item + 'bahn.png';
+		return 'transportTiles/transportTilesRW' + item + 'bahn.png';
 	case '+':
-		return '../transportTiles/transportTilesTRBL' + item + 'bahn.png';
+		return 'transportTiles/transportTilesTRBL' + item + 'bahn.png';
 	case 'x':
-		return '../transportTiles/transportTilesNESW' + item + 'bahn.png';
+		return 'transportTiles/transportTilesNESW' + item + 'bahn.png';
 	}
 
-	return '../cityTiles/cityTiles_072.png';
+	return 'cityTiles/cityTiles_072.png';
 }
 
 function getTransportationTileBoth(chrS, chrU) {
@@ -81,9 +81,9 @@ function getTransportationTileBoth(chrS, chrU) {
 	var chr = chrS + chrU;
 	switch (chr) {
 	case '|-':
-		return '../transportTiles/transportTilesTRBLsubahn.png';
+		return 'transportTiles/transportTilesTRBLsubahn.png';
 	case '-|':
-		return '../transportTiles/transportTilesTRBLusbahn.png';
+		return 'transportTiles/transportTilesTRBLusbahn.png';
 	}
 
 	return getTransportationTile(chrS, 's');
@@ -100,7 +100,7 @@ function createSprite() {
 
 	return {
 		obj: sprite,
-		basePath: '../vehicleTiles/Taxi/taxi_',
+		basePath: 'vehicleTiles/Taxi/taxi_',
 		x: -1,
 		y: -1,
 		setTo: function (x, y) {
@@ -246,11 +246,11 @@ function composeMap(lines, netSBahn, netUBahn) {
 		}
 		for (x = 0; x < maxX; ++x) {
 			if ((stationsU[x] > 0) && (stationsS[x] > 0)) {
-				html += '<img class="tile" style="left:' + (x * 130) + 'px;" src="' + '../transportDetails/transportDetailsSubahn.png">';
+				html += '<img class="tile" style="left:' + (x * 130) + 'px;" src="' + 'transportDetails/transportDetailsSubahn.png">';
 			} else if (stationsU[x] > 0) {
-				html += '<img class="tile" style="left:' + (x * 130) + 'px;" src="' + '../transportDetails/transportDetailsUbahn.png">';
+				html += '<img class="tile" style="left:' + (x * 130) + 'px;" src="' + 'transportDetails/transportDetailsUbahn.png">';
 			} else if (stationsS[x] > 0) {
-				html += '<img class="tile" style="left:' + (x * 130) + 'px;" src="' + '../transportDetails/transportDetailsSbahn.png">';
+				html += '<img class="tile" style="left:' + (x * 130) + 'px;" src="' + 'transportDetails/transportDetailsSbahn.png">';
 			}
 		}
 		html += '</p>';
@@ -266,8 +266,8 @@ function load() {
 //	ajax('https://raw.githubusercontent.com/juliuste/vbb-toy-map/master/lines.json', function(lines) {
 	ajax('https://cdn.rawgit.com/juliuste/ca37f19122407ef710a2c6322306af11/raw/a559056d82b99400b0ff4f868088445614722130/lines2.json', function(lines) {
 //	ajax('lines.json', function(lines) {
-		ajax('netSBahn.json', function(netSBahn) {
-			ajax('netUBahn.json', function(netUBahn) {
+		ajax('test/netSBahn.json', function(netSBahn) {
+			ajax('test/netUBahn.json', function(netUBahn) {
 				composeMap(lines, netSBahn, netUBahn);
 			});
 		});
