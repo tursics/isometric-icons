@@ -17,14 +17,43 @@ function ajax(url, callback) {
 	xmlhttp.send();
 }
 
+function getTransportationTile(chr, item) {
+	'use strict';
+
+	switch (chr) {
+	case '-':
+		return '../transportTiles/transportTilesRL' + item + 'bahn.png';
+	case '|':
+		return '../transportTiles/transportTilesTB' + item + 'bahn.png';
+	case '/':
+		return '../transportTiles/transportTilesNS' + item + 'bahn.png';
+	case ';':
+		return '../transportTiles/transportTilesEW' + item + 'bahn.png';
+	case '.':
+		return '../transportTiles/transportTilesRS' + item + 'bahn.png';
+	case ',':
+		return '../transportTiles/transportTilesEL' + item + 'bahn.png';
+	case '`':
+		return '../transportTiles/transportTilesBW' + item + 'bahn.png';
+	case 'l':
+		return '../transportTiles/transportTilesTE' + item + 'bahn.png';
+	case 'v':
+		return '../transportTiles/transportTilesRW' + item + 'bahn.png';
+	case '+':
+		return '../transportTiles/transportTilesTRBL' + item + 'bahn.png';
+	}
+
+	return '../cityTiles/cityTiles_072.png';
+}
+
 function composeMap(lines, netSBahn, netUBahn) {
 	'use strict';
 
-	var maxX = 0, maxY = 0, line, coords;
+	var maxX = 0, maxY = 0, line, coords, key, index, map, html, x, y, img;
 
-	for (var key in lines) {
+	for (key in lines) {
 		line = lines[key];
-		for (var index = 0; index < line.length; ++index) {
+		for (index = 0; index < line.length; ++index) {
 			coords = line[index].coords;
 			maxX = Math.max(maxX, coords.x);
 			maxY = Math.max(maxY, coords.y);
@@ -33,36 +62,24 @@ function composeMap(lines, netSBahn, netUBahn) {
 	++maxX;
 	++maxY;
 
-	var map = document.getElementById('map');
-	var html = '';
-	for (var y = 0; y < maxY; ++y) {
+	map = document.getElementById('map');
+	html = '';
+	for (y = 0; y < maxY; ++y) {
 		html += '<p>';
-		for (var x = 0; x < maxX; ++x) {
-			var img = '../cityTiles/cityTiles_072.png';
+		for (x = 0; x < maxX; ++x) {
+			img = '../cityTiles/cityTiles_072.png';
 
 			if ((typeof netSBahn[y] !== 'undefined') && (typeof netSBahn[y][x] !== 'undefined')) {
-				switch(netSBahn[y][x]) {
-				case '-': img = '../transportTiles/transportTilesRLsbahn.png'; break;
-				case '|': img = '../transportTiles/transportTilesTBsbahn.png'; break;
-				case '/': img = '../transportTiles/transportTilesNSsbahn.png'; break;
-				case ';': img = '../transportTiles/transportTilesEWsbahn.png'; break;
-				case '.': img = '../transportTiles/transportTilesRSsbahn.png'; break;
-				}
+				img = getTransportationTile(netSBahn[y][x], 's');
 			} else if ((typeof netUBahn[y] !== 'undefined') && (typeof netUBahn[y][x] !== 'undefined')) {
-				switch(netUBahn[y][x]) {
-				case '-': img = '../transportTiles/transportTilesRLubahn.png'; break;
-				case '|': img = '../transportTiles/transportTilesTBubahn.png'; break;
-				case '/': img = '../transportTiles/transportTilesNSubahn.png'; break;
-				case ';': img = '../transportTiles/transportTilesEWubahn.png'; break;
-				case '.': img = '../transportTiles/transportTilesRSubahn.png'; break;
-				}
+				img = getTransportationTile(netUBahn[y][x], 'u');
 			}
 			html += '<img id="tile' + x + '_' + y + '" class="tile" style="left:' + (x * 130) + 'px;" src="' + img + '">';
 		}
 
 		var stationsS = [];
 		var stationsU = [];
-		for (var x = 0; x < maxX; ++x) {
+		for (x = 0; x < maxX; ++x) {
 			stationsS.push(0);
 			stationsU.push(0);
 		}
@@ -79,7 +96,7 @@ function composeMap(lines, netSBahn, netUBahn) {
 				}
 			}
 		}
-		for (var x = 0; x < maxX; ++x) {
+		for (x = 0; x < maxX; ++x) {
 			if ((stationsU[x] > 0) && (stationsS[x] > 0)) {
 				html += '<img class="tile" style="left:' + (x * 130) + 'px;" src="' + '../transportDetails/transportDetailsSubahn.png">';
 			} else if (stationsU[x] > 0) {
