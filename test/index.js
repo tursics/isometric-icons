@@ -98,7 +98,7 @@ function getTransportationTileBoth(chrS, chrU) {
 	return getTransportationTile(chrS, 's');
 }
 
-function createSprite() {
+function createSprite(type) {
 	'use strict';
 
 	++spriteCount;
@@ -109,7 +109,7 @@ function createSprite() {
 
 	return {
 		obj: sprite,
-		basePath: 'vehicleTiles/Taxi/taxi_',
+		basePath: ('u' !== type ? 'vehicleTiles/Civilian/Red/Truck%201/carRed6_' : 'vehicleTiles/Taxi/taxi_'),
 		x: -1,
 		y: -1,
 		setTo: function (x, y) {
@@ -173,10 +173,10 @@ function driveLine(sprite, line, startPos, endPos, callback) {
 	oneStep();
 }
 
-function placeVehicles(line) {
+function placeVehicles(line, type) {
 	'use strict';
 
-	var s1 = createSprite(), s2 = createSprite();
+	var s1 = createSprite(type), s2 = createSprite(type);
 
 	function firstWay() {
 		driveLine(s1, line, 0, line.length - 1, function() {
@@ -197,7 +197,7 @@ function testSprites(lines) {
 	'use strict';
 
 	for (var key in lines) {
-		placeVehicles(lines[key]);
+		placeVehicles(lines[key], key.substr(0, 1));
 	}
 }
 
