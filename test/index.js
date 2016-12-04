@@ -83,16 +83,34 @@ function createSprite() {
 			this.x = x;
 			this.y = y;
 			this.obj.src = this.basePath + 'E.png';
-			this.obj.style = 'left:' + (55 + x * 130 + (y % 2) * 65) + 'px;top:' + ((y + 1) * 33) + 'px;';
+			this.obj.style = 'left:' + (65 + x * 130 + (y % 2) * 65) + 'px;top:' + ((y + 1) * 33) + 'px;';
 		},
 		moveTo: function (x, y, callback) {
 			var duration = 250 * Math.max(Math.abs(this.x - x), Math.abs(this.y - y));
+
+			if ((this.x == x) && (this.y < y)) {
+				this.obj.src = this.basePath + 'S.png';
+			} else if ((this.x == x) && (this.y > y)) {
+				this.obj.src = this.basePath + 'N.png';
+			} else if ((this.x < x) && (this.y < y)) {
+				this.obj.src = this.basePath + 'SE.png';
+			} else if ((this.x < x) && (this.y > y)) {
+				this.obj.src = this.basePath + 'NE.png';
+			} else if ((this.x < x) && (this.y === y)) {
+				this.obj.src = this.basePath + 'E.png';
+			} else if ((this.x > x) && (this.y === y)) {
+				this.obj.src = this.basePath + 'W.png';
+			} else if ((this.x > x) && (this.y > y)) {
+				this.obj.src = this.basePath + 'NW.png';
+			} else if ((this.x > x) && (this.y < y)) {
+				this.obj.src = this.basePath + 'SW.png';
+			}
 
 			this.x = x;
 			this.y = y;
 
 			$(this.obj).animate({
-				left: (55 + x * 130 + (y % 2) * 65),
+				left: (65 + x * 130 + (y % 2) * 65),
 				top: ((y + 1) * 33)
 			}, duration, callback);
 		}
