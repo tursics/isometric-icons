@@ -1,3 +1,5 @@
+var spriteCount = 0;
+
 function ajax(url, callback) {
 	'use strict';
 
@@ -60,6 +62,60 @@ function getTransportationTileBoth(chrS, chrU) {
 	}
 
 	return getTransportationTile(chrS, 's');
+}
+
+function createSprite() {
+	'use strict';
+
+	++spriteCount;
+
+	var sprites = document.getElementById('sprites'), sprite;
+	sprites.innerHTML += '<img id="sprite' + spriteCount + '">';
+
+	sprite = document.getElementById('sprite' + spriteCount);
+
+	return {
+		obj: sprite,
+		basePath: '../vehicleTiles/Taxi/taxi_',
+		x: -1,
+		y: -1,
+		setTo: function (x, y) {
+			this.x = x;
+			this.y = y;
+			this.obj.src = this.basePath + 'E.png';
+			this.obj.style = 'left:' + (55 + x * 130 + (y % 2) * 65) + 'px;top:' + ((y + 1) * 33) + 'px;';
+		},
+		moveTo: function (x, y, callback) {
+			var duration = 250 * Math.max(Math.abs(this.x - x), Math.abs(this.y - y));
+
+			this.x = x;
+			this.y = y;
+
+			$(this.obj).animate({
+				left: (55 + x * 130 + (y % 2) * 65),
+				top: ((y + 1) * 33)
+			}, duration, callback);
+		}
+	};
+}
+
+function testSprites(lines) {
+	'use strict';
+
+	var s = createSprite(),
+		line = lines.ring,
+		pos = 0;
+
+	s.setTo(line[pos].coords.x, line[pos].coords.y);
+
+	function oneStep() {
+		++pos
+
+		if( pos < line.length) {
+			s.moveTo(line[pos].coords.x, line[pos].coords.y, oneStep);
+		}
+	}
+	oneStep();
 }
 
 function composeMap(lines, netSBahn, netUBahn) {
@@ -125,11 +181,16 @@ function composeMap(lines, netSBahn, netUBahn) {
 		}
 		html += '</p>';
 	}
+
+	html += '<div id="sprites"></div>';
 	map.innerHTML = html;
+
+	testSprites(lines);
 }
 
 function load() {
-	ajax('https://cdn.rawgit.com/juliuste/ca37f19122407ef710a2c6322306af11/raw/a559056d82b99400b0ff4f868088445614722130/lines2.json', function(lines) {
+//	ajax('https://cdn.rawgit.com/juliuste/ca37f19122407ef710a2c6322306af11/raw/a559056d82b99400b0ff4f868088445614722130/lines2.json', function(lines) {
+	ajax('lines.json', function(lines) {
 		ajax('netSBahn.json', function(netSBahn) {
 			ajax('netUBahn.json', function(netUBahn) {
 				composeMap(lines, netSBahn, netUBahn);
