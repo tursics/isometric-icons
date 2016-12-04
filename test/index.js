@@ -69,9 +69,9 @@ function composeMap(lines, netSBahn, netUBahn) {
 		for (x = 0; x < maxX; ++x) {
 			img = '../cityTiles/cityTiles_072.png';
 
-			if ((typeof netSBahn[y] !== 'undefined') && (typeof netSBahn[y][x] !== 'undefined')) {
+			if ((typeof netSBahn[y] !== 'undefined') && (typeof netSBahn[y][x] !== 'undefined') && (netSBahn[y][x] !== ' ')) {
 				img = getTransportationTile(netSBahn[y][x], 's');
-			} else if ((typeof netUBahn[y] !== 'undefined') && (typeof netUBahn[y][x] !== 'undefined')) {
+			} else if ((typeof netUBahn[y] !== 'undefined') && (typeof netUBahn[y][x] !== 'undefined') && (netUBahn[y][x] !== ' ')) {
 				img = getTransportationTile(netUBahn[y][x], 'u');
 			}
 			html += '<img id="tile' + x + '_' + y + '" class="tile" style="left:' + (x * 130) + 'px;" src="' + img + '">';
