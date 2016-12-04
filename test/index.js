@@ -70,9 +70,8 @@ function createSprite() {
 	++spriteCount;
 
 	var sprites = document.getElementById('sprites'), sprite;
-	sprites.innerHTML += '<img id="sprite' + spriteCount + '">';
-
-	sprite = document.getElementById('sprite' + spriteCount);
+	sprite = document.createElement('img');
+	sprites.appendChild(sprite);
 
 	return {
 		obj: sprite,
@@ -88,9 +87,9 @@ function createSprite() {
 		moveTo: function (x, y, callback) {
 			var duration = 250 * Math.max(Math.abs(this.x - x), Math.abs(this.y - y));
 
-			if ((this.x == x) && (this.y < y)) {
+			if ((this.x === x) && (this.y < y)) {
 				this.obj.src = this.basePath + 'S.png';
-			} else if ((this.x == x) && (this.y > y)) {
+			} else if ((this.x === x) && (this.y > y)) {
 				this.obj.src = this.basePath + 'N.png';
 			} else if ((this.x < x) && (this.y < y)) {
 				this.obj.src = this.basePath + 'SE.png';
@@ -117,23 +116,55 @@ function createSprite() {
 	};
 }
 
-function testSprites(lines) {
+function driveLine(sprite, line, startPos, endPos, callback) {
 	'use strict';
 
-	var s = createSprite(),
-		line = lines.ring,
-		pos = 0;
+	var pos = startPos;
 
-	s.setTo(line[pos].coords.x, line[pos].coords.y);
+	sprite.setTo(line[pos].coords.x, line[pos].coords.y);
 
 	function oneStep() {
-		++pos
+		if (pos !== endPos) {
+			if (startPos < endPos) {
+				++pos;
+			} else {
+				--pos;
+			}
 
-		if( pos < line.length) {
-			s.moveTo(line[pos].coords.x, line[pos].coords.y, oneStep);
+			sprite.moveTo(line[pos].coords.x, line[pos].coords.y, oneStep);
+		} else {
+			callback();
 		}
 	}
 	oneStep();
+}
+
+function placeVehicles(line) {
+	'use strict';
+
+	var s1 = createSprite(), s2 = createSprite();
+
+	function firstWay() {
+		driveLine(s1, line, 0, line.length - 1, function() {
+			driveLine(s1, line, line.length - 1, 0, firstWay);
+		});
+	}
+	firstWay();
+
+	function wayBack() {
+		driveLine(s2, line, line.length - 1, 0, function() {
+			driveLine(s2, line, 0, line.length - 1, wayBack);
+		});
+	}
+	wayBack();
+}
+
+function testSprites(lines) {
+	'use strict';
+
+	for (var key in lines) {
+		placeVehicles(lines[key]);
+	}
 }
 
 function composeMap(lines, netSBahn, netUBahn) {
