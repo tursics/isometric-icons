@@ -19,6 +19,31 @@ function ajax(url, callback) {
 	xmlhttp.send();
 }
 
+function getRandomTile() {
+	'use strict';
+
+	var items = [
+		'../landscapeTiles/landscapeTiles_059.png',
+		'../landscapeTiles/landscapeTiles_067.png',
+		'../landscapeTiles/landscapeTiles_067.png',
+		'../landscapeTiles/landscapeTiles_067.png',
+		'../cityTiles/cityTiles_043.png',
+		'../cityTiles/cityTiles_051.png',
+		'../cityTiles/cityTiles_059.png',
+		'../cityTiles/cityTiles_067.png',
+		'../cityTiles/cityTiles_067.png',
+		'../cityTiles/cityTiles_067.png',
+		'../buildingTiles/buildingTiles_001.png',
+		'../buildingTiles/buildingTiles_004.png',
+		'../buildingTiles/buildingTiles_014.png',
+		'../buildingTiles/buildingTiles_020.png',
+		'../buildingTiles/buildingTiles_034.png',
+		'../buildingTiles/buildingTiles_099.png',
+		'../cityTiles/cityTiles_072.png'
+	];
+	return items[Math.floor(Math.random()*items.length)];
+}
+
 function getTransportationTile(chr, item) {
 	'use strict';
 
@@ -188,7 +213,7 @@ function composeMap(lines, netSBahn, netUBahn) {
 	for (y = 0; y < maxY; ++y) {
 		html += '<p>';
 		for (x = 0; x < maxX; ++x) {
-			img = '../cityTiles/cityTiles_072.png';
+			img = getRandomTile();
 
 			if ((typeof netSBahn[y] !== 'undefined') && (typeof netSBahn[y][x] !== 'undefined') && (netSBahn[y][x] !== ' ') && (typeof netUBahn[y] !== 'undefined') && (typeof netUBahn[y][x] !== 'undefined') && (netUBahn[y][x] !== ' ')) {
 				img = getTransportationTileBoth(netSBahn[y][x], netUBahn[y][x]);
@@ -238,6 +263,7 @@ function composeMap(lines, netSBahn, netUBahn) {
 }
 
 function load() {
+//	ajax('https://raw.githubusercontent.com/juliuste/vbb-toy-map/master/lines.json', function(lines) {
 	ajax('https://cdn.rawgit.com/juliuste/ca37f19122407ef710a2c6322306af11/raw/a559056d82b99400b0ff4f868088445614722130/lines2.json', function(lines) {
 //	ajax('lines.json', function(lines) {
 		ajax('netSBahn.json', function(netSBahn) {
