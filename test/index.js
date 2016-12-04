@@ -1,5 +1,3 @@
-var spriteCount = 0;
-
 function ajax(url, callback) {
 	'use strict';
 
@@ -62,86 +60,6 @@ function getTransportationTileBoth(chrS, chrU) {
 	}
 
 	return getTransportationTile(chrS, 's');
-}
-
-function createSprite() {
-	'use strict';
-
-	var sprites = document.getElementById('sprites'), sprite;
-
-	++spriteCount;
-	sprites.innerHTML += '<img id="sprite' + spriteCount + '">';
-	sprite = document.getElementById('sprite' + spriteCount);
-
-	return {
-		obj: sprite,
-		x: -1,
-		y: -1,
-		basePath: '../vehicleTiles/Taxi/taxi_',
-		showAt: function (x, y) {
-			this.x = x;
-			this.y = y;
-			this.obj.src = this.basePath + 'E.png';
-			this.obj.style = 'left: ' + (x * 130 + 65 * (y % 2 + 1)) + 'px;top: ' + ((y + 1) * 33) + 'px;';
-		},
-		moveTo: function (x, y, callback) {
-			var steps = Math.max(Math.abs(this.x - x) + Math.abs(this.y - y)),
-				duration = 250 * steps;
-
-			if ((this.x === x) && (this.y > y)) {
-				this.obj.src = this.basePath + 'N.png';
-			}
-			if ((this.x === x) && (this.y < y)) {
-				this.obj.src = this.basePath + 'S.png';
-			}
-			if ((this.x < x) && (this.y > y)) {
-				this.obj.src = this.basePath + 'NE.png';
-			}
-			if ((this.x < x) && (this.y < y)) {
-				this.obj.src = this.basePath + 'SE.png';
-			}
-			if ((this.x < x) && (this.y === y)) {
-				this.obj.src = this.basePath + 'E.png';
-			}
-			if ((this.x > x) && (this.y === y)) {
-				this.obj.src = this.basePath + 'W.png';
-			}
-			if ((this.x > x) && (this.y > y)) {
-				this.obj.src = this.basePath + 'NW.png';
-			}
-			if ((this.x > x) && (this.y < y)) {
-				this.obj.src = this.basePath + 'SW.png';
-			}
-
-			this.x = x;
-			this.y = y;
-
-			$(this.obj).animate({
-				left: (x * 130 + 65 * (y % 2 + 1)),
-				top: ((y + 1) * 33)
-			}, duration, callback);
-		}
-	};
-}
-
-function testSprite(lines) {
-	'use strict';
-
-	var line = lines.ring,
-		pos = 0,
-		coords = line[pos].coords,
-		sprite = createSprite();
-
-	sprite.showAt(coords.x, coords.y);
-
-	function goThrow() {
-		++pos;
-		if (pos < line.length) {
-			coords = line[pos].coords;
-			sprite.moveTo(coords.x, coords.y, goThrow);
-		}
-	}
-	goThrow();
 }
 
 function composeMap(lines, netSBahn, netUBahn) {
@@ -207,12 +125,7 @@ function composeMap(lines, netSBahn, netUBahn) {
 		}
 		html += '</p>';
 	}
-
-	html += '<div id="sprites"></div>';
-
 	map.innerHTML = html;
-
-	testSprite(lines);
 }
 
 function load() {
