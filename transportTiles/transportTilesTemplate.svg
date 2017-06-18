@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2"
@@ -285,6 +286,15 @@
        inkscape:label=""
        inkscape:color="rgb(0,0,255)" />
   </sodipodi:namedview>
+  <image
+     sodipodi:absref="/Users/thomastursics/github/isometric-icons/transportTiles/transportTilesEWsbahn.png"
+     xlink:href="transportTilesEWsbahn.png"
+     y="-5.2235209e-06"
+     x="0"
+     id="image10"
+     preserveAspectRatio="none"
+     height="101"
+     width="132" />
   <g
      id="g4250"
      transform="translate(0,-40)">
